@@ -1,4 +1,217 @@
 // bower:scss
 // endbower
 
+// sign-in and sign-up start, end at 72
+.header {
+	border: 1px solid black;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	line-height: 70px;
+}
+
+.logo {
+	float: left;
+}
+
+.container {
+	border: 1px solid black;
+	width: 30%;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sign {
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 30px;
+} 
+
+.email {
+	display: block;
+	width: 60%;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.password {
+	display: block;
+	width: 60%;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sign-in-button {
+	display: block;
+	margin-top: 30px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sign-up {
+	display: block;
+	margin-top: 50px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+}
+
+.sign-up-button {
+	display: block;
+	margin-top: 30px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+// sign-in and sign-up end
+
+// main start, ends at 165
+
+.main-header {
+    border: 1px solid black;
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    line-height: 2.6em;
+}
+
+.main-logo {
+    float: left;
+}
+
+.main-user {
+    float: right;
+    height: 10px;
+    font-size: 15px;
+    margin-top: 80px;
+    margin-right: 10px;
+}
+
+.beer-button {
+    margin-left: 170px;
+}
+
+.main-example {
+    width: 300px;
+    float: right; 
+    margin-top: 60px;
+    display: inline-block;
+}
+
+.main-user-name {
+    float: right;
+    width: 130px;
+    margin-top: 60px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.main-score {
+    display: inline-block;
+    margin-top: 60px;
+    width: 200px;
+    float: right;
+}
+
+.main-delete-button {
+    float: right;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.arrows {
+    display: inline-block;
+    float: right;
+}
+
+.main-container {
+    border: 1px solid black;
+    font-size: 40px;
+    width: 75%;
+    height: 800px;
+    float: right;
+}
+
+.main-contents {
+    border: 1px solid black;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+
+.main-sidebar {
+    border: 1px solid black;
+    width: 23%;
+    height: 800px;
+    float: left; 
+}
+
+.main-footer {
+    border: 1px solid black;
+    margin-top: 840px;
+    width: 100%;
+    height: 60px;
+    display: block;
+}
+
+//main end
+
+//add beer view start, ends on 212 
+
+.add-beer-header {
+	border: 1px solid black;
+	text-align: center;
+	line-height: 70px;
+	width: 100%;
+	height: 80px;
+}
+
+.add-beer-user {
+	float: right;
+	font-size: 15px;
+	margin-top: 35px;
+	margin-right: 10px;
+}
+
+.add-beer-logo {
+	float: left;
+}
+
+.add-beer-container {
+	border: 1px solid black;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+	width: 75%;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.add-beer-img {
+	margin-top: 10px;
+}
+
+.add-beer-submit {
+	margin-bottom: 20px;
+}
+
+.add-beer-footer {
+	border: 1px solid black;
+	margin-top: 18px;
+	height: 50px;
+}
+
+//add beer ends
+
+//user view starts and ends on 
+
 

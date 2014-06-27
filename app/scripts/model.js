@@ -12,13 +12,13 @@ var User = Parse.Object.extend('user');
 //Collections
 
 var PlaceCollection = Parse.Collection.extend({
-	model: place
+	model: Place
 });
 
 var BeerCollection = Parse.Collection.extend({
-	model: beer
+	model: Beer
 });
 
 var UserCollection = Parse.Collection.extend({
-	model: user
+	model: User
 });

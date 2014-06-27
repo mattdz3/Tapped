@@ -13,7 +13,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+        
         <!-- endbuild -->
     </head>
     <body>
@@ -21,85 +21,145 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <script type="text/javascript" class="main-view">
-            <h1 class="header">
-                <div class="logo"> <img src="http://findlocalretailers.com/sites/findlocalretailers.com/files/default_images/logo_placeholder_0.gif" height="140px"></img>
-                </div>
-                Tapped
-                <div class="user">User name/Sign In</div>
-            </h1>
+        <div class="new-views"></div>
 
-            <div class="main-container">WELCOME VIEW / MAIN VIEW 
-                <button class="beer-button">Add A Beer!</button>
-                <div class="contents">
-                    <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
-                    <img class="arrows" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/blue-jelly-icons-arrows/007388-blue-jelly-icon-arrows-arrows-up-down1.png" width="150">
-
-                    <div class="score">The users score</div>
-                    <div class="user-name">User Name</div>
-                    <div class="example">Name and description of Beer</div>
-                </div>  
-                    <button class="delete">Delete</button>
+<!-- sign-in and sign-up start, end at 68 -->
+       <script type="text/template" class="sign-in-temp">
+        <h1 class="header">Tapped
+            <div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></img>
             </div>
+        </h1>
 
-            <div class="sidebar">
-                <ul>
-                    <li>A list</li>
-                    <li>of</li>
-                    <li>different</li>
-                    <li>bars</li>
-                    <li>and</li>
-                    <li>stores</li>
-                    <li>that keep</li>
-                    <li>beer on</li>
-                    <li>tap</li>
-                    <p>When you click on one of the listed locations it will change to that locations main view</p>
-                </ul>
+        <div class="container">
+            <div class="sign">Welcome!
+                <input class="email" placeholder="log in with your e-mail">
+                </input> 
+
+                <input class="password" placeholder="password"></input>
+
+                <button class="sign-in-button">Sign In</button>
+
+                <div class="sign-up">Not Regeistered? No Problem!</div>
+
+                <button class="sign-up-button">Click here to sign up!</button>
             </div>
-
-            <div class="footer">footer goes here!</div>
+        </div>
         </script>
 
-        <script type="text/javascript" class="user-view">
-            <h1>Tapped
-                <div class="logo"> <img src="http://findlocalretailers.com/sites/findlocalretailers.com/files/default_images/logo_placeholder_0.gif" height="80px"></img>
+
+        <script type="text/template" class="sign-up-temp">
+            <h1 class="header">Tapped
+                <div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></img>
                 </div>
             </h1>
 
             <div class="container">
-                <div class="contents">
-                    <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
-                    <div class="example">You added this beer to this place!
-                        <div class="score">Your Score</div>
-                    </div>
-                </div>
-                <div class="contents-again">
-                    <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
-                    <div class="example">You liked this beer this user added!
-                        <div class="score">Users Score</div>
-                    </div>
+                <div class="sign">Welcome!
+                    <input class="email" placeholder="Sign up with your e-mail">
+                    </input> 
+
+                    <input class="password" placeholder="Create a password"></input>
+
+                    <button class="sign-in-button">Create Account</button>
                 </div>
             </div>
-
-            <div class="sidebar">
-                <img src="https://farmly.net/static/images/user-placeholder.jpg"></img>
-                <div class="name">User Name</div>
-                <div class="date">Date Joined</div>
-                <div class="score">Score</div>
-            </div>
-
-            <div class="footer">footer goes here</div>
         </script>
 
-     
+<!-- sign-in and sign-up end -->
+
+<!-- main start -->
+
+        <script type="text/template" class="main-view-temp">
+        <h1 class="main-header">
+        <div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"></img>
+        </div>
+        Tapped
+        <div class="main-user">User name/Sign In</div>
+    </h1>
+
+    <div class="main-container">WELCOME VIEW / MAIN VIEW 
+        <button class="beer-button">Add A Beer!</button>
+        <div class="main-contents">
+            <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
+            <img class="arrows" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/blue-jelly-icons-arrows/007388-blue-jelly-icon-arrows-arrows-up-down1.png" width="150">
+
+            <div class="main-score">The users score</div>
+            <div class="main-user-name">User Name</div>
+            <div class="main-example">Name and description of Beer</div>
+        </div>  
+            <button class="main-delete-button">Delete</button>
+    </div>
+
+    <div class="main-sidebar">
+        <ul>
+            <li>A list</li>
+            <li>of</li>
+            <li>different</li>
+            <li>bars</li>
+            <li>and</li>
+            <li>stores</li>
+            <li>that keep</li>
+            <li>beer on</li>
+            <li>tap</li>
+        </ul>
+    </div>
+
+    <div class="main-footer">footer goes here!</div>
+    </script>
+
+<!-- main end -->
+
+<!-- add beer view start, ends on 145 -->
+
+    <script type="text/template" class="add-beer-temp">
+        <h1 class="add-beer-header">Tapped
+            <div class="add-beer-user">User Name</div>
+
+            <div class="add-beer-logo"> <img src="images/tapped-logo.jpg" height="80px"></img>
+            </div>
+        </h1>
+
+        <div class="add-beer-container">
+            <div class="add-beer-contents">
+                <img class="add-beer-img" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
+
+                <form class="myform">
+                    <div>
+                        <select class="dropdown">
+                            <option>Tasty Beer</option>
+                            <option>Delicious Beer</option>
+                            <option>Gross Beer</option>
+                        </select>
+
+                        <select class="dropdown">
+                            <option>Barleys</option>
+                            <option>Greenville Beer Ex.</option>
+                            <option>The Moon</option>
+                        </select>
+                    </div>  
+                </form>
+
+                <button class="add-beer-submit">Submit</button>
+            </div>
+        </div>
+
+        <div class="add-beer-footer">Footer is down here!</div>
+    </script>
+<!-- Add beer view ends -->
+
+<!-- User View starts and ends on -->
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
+
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/underscore/underscore.js"></script>
+        
         <!-- endbower -->
         <!-- endbuild -->
+
+        <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -112,6 +172,13 @@
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/model.js"></script>
+        <script src="scripts/signInView.js"></script>
+        <script src="scripts/signUpView.js"></script>
+        <script src="scripts/mainView.js"></script>
+        <script src="scripts/AddBeer.js"></script>
+        <script src="scripts/userView.js"></script>
+        <script src="scripts/router.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
