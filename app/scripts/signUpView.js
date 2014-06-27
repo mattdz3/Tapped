@@ -28,6 +28,7 @@ var SignUpView = Parse.View.extend({
 		user.signUp(null, {
 			success: function(user) {
 				console.log("good job!")
+				
 			},
 			error: function(user, error) {
 				alert("Error" + error.code + " " + error.message);
@@ -35,7 +36,7 @@ var SignUpView = Parse.View.extend({
 			
 		})
 		this.remove();
-		var welcomeView = new MainView();
+		var userView = new UserView();
 	},
 
 })

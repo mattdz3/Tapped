@@ -15,7 +15,7 @@ var AddBeerView = Parse.View.extend({
 
 	render: function() {
 		var renderTemp = this.template(this.model)
-		this.$el.html(renderTemp)
+		this.$el.html(renderTemp);
 		return this;
 	},
 

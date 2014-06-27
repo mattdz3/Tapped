@@ -212,6 +212,87 @@
 
 //add beer ends
 
-//user view starts and ends on 
+//user view starts and ends on 296
 
+.user-header {
+	border: 1px solid black;
+	text-align: center;
+	width: 100%;
+	height: 80px;
+	line-height: 70px;
+}
 
+.user-logo {
+	float: left;
+}
+
+.user-container {
+	border: 1px solid black;
+	width: 70%;
+	height: 800px;
+	float: right;
+}
+
+.user-contents {
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.user-example {
+	float: right;
+	width: 800px;
+	margin-top: 75px;
+}
+
+.user-score {
+	float: right;
+	width: 400px;
+}
+
+.user-contents-again {
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.user-sidebar {
+	border: 1px solid black;
+	width: 28%;
+	height: 800px;
+	float: left;
+}
+
+.user-sidebar img {
+	width: 100%;
+}
+
+.user-name {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+.user-date {
+	text-align: center;
+	font-size: 25px;
+	margin-top: 10px;
+}
+
+.user-score2 {
+	text-align: center;
+	font-size: 25px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.user-footer {
+	border: 1px solid black;
+	width: 100%;
+	height: 80px;
+	margin-top: 840px;
+}
+
+//user view ends
