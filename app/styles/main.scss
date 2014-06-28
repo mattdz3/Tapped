@@ -203,6 +203,10 @@ body {
 	float: left;
 }
 
+.add-beer-home {
+	float: right;
+}
+
 .add-beer-container {
 	border: 1px solid black;
 	font-size: 15px;
@@ -243,13 +247,17 @@ body {
     display: none;
     position: absolute;
     width: 200px;
+    height: 300px;
+    overflow: scroll;
 
 }
+
 #results div {
     position: absolute;
     width: 200px; 
     height: 15px;
     cursor: pointer;
+    margin-left: 70px;
 }
 #results div span {
     color: red;
@@ -271,6 +279,10 @@ body {
 
 .user-logo {
 	float: left;
+}
+
+.user-home-button {
+	float: right;
 }
 
 .user-container {
