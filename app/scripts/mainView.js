@@ -6,6 +6,7 @@ var MainView = Parse.View.extend({
 
 	events: {
 		"click .beer-button" : "addBeer",
+		"click .main-delete-button" : "deleteBeer",
 	},
 
 	initialize: function() {
@@ -22,5 +23,9 @@ var MainView = Parse.View.extend({
 	addBeer: function() {
 		this.remove();
 		var createBeer = new AddBeerView();
-	}
+	},
+
+	deleteBeer: function() {
+		this.model.destroy();
+	},
 })

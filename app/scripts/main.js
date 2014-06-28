@@ -1,5 +1,9 @@
 Parse.initialize("ydeAeqU5zqST1JSp3SnmRnB8u6FmMsf2upM4GzWn", "D8QYFvztU3R2E9uZSaKzby7ZXpJGSHJ2skfECzmC");
 
+
+var router = new AppRouter();
+Parse.history.start();
+
 placeObj = new Place();
 beerObj = new Beer();
 userObj = new User();

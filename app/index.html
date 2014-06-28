@@ -24,6 +24,7 @@
         <div class="new-views"></div>
 
 <!-- sign-in and sign-up start, end at 68 -->
+
        <script type="text/template" class="sign-in-temp">
         <h1 class="header">Tapped
             <div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></img>
@@ -122,29 +123,19 @@
         <div class="add-beer-container">
             <div class="add-beer-contents">
                 <img class="add-beer-img" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
-
-                <form class="myform">
-                    <div>
-                        <select class="dropdown">
-                            <option>Tasty Beer</option>
-                            <option>Delicious Beer</option>
-                            <option>Gross Beer</option>
-                        </select>
-
-                        <select class="dropdown">
-                            <option>Barleys</option>
-                            <option>Greenville Beer Ex.</option>
-                            <option>The Moon</option>
-                        </select>
-                    </div>  
-                </form>
-
-                <button class="add-beer-submit">Submit</button>
             </div>
+
+            <form id="theForm">
+            Search for: <input name="search" class="searchField"/>
+            </form>
+            <div id="results"></div>
+                
+            <button class="add-beer-submit">Submit</button> 
         </div>
 
         <div class="add-beer-footer">Footer is down here!</div>
     </script>
+
 <!-- Add beer view ends -->
 
 <!-- User View starts and ends on 182 -->

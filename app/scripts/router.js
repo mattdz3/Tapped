@@ -3,11 +3,15 @@
 var AppRouter = Parse.Router.extend({
 
 	routes: {
-		"home" : "",
-		"signin" : "signInView",
+		"" : "",
+		"login" : "signIn",
 	},
 
-	signInView: function() {
+	initialize: function() {
+		console.log("it works!")
+	},
+
+	signIn: function() {
 
 	},
 

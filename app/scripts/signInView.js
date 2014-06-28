@@ -31,7 +31,7 @@ var SignInView = Parse.View.extend({
 
 		Parse.User.logIn($('.email').val(), $('.password').val(), {
 			success: function(user) {
-				console.log("I work!")
+				console.log("User has logged in!")
 				
 			},
 			error: function(user, error) {

@@ -1,6 +1,16 @@
 // bower:scss
 // endbower
 
+body {
+	margin: 0;
+}
+
+// .new-views {
+// 	background: url('http://thewhistlingpigsmokehouse.townsquareinteractive.com/files/2013/08/mediumred.jpg');
+// 	background-size: cover;
+
+// }
+
 // sign-in and sign-up start, end at 72
 .header {
 	border: 1px solid black;
@@ -20,6 +30,8 @@
 	height: 600px;
 	margin-left: auto;
 	margin-right: auto;
+	background: white;
+
 }
 
 .sign {
@@ -79,6 +91,7 @@
     height: 140px;
     text-align: center;
     line-height: 2.6em;
+    background: white;
 }
 
 .main-logo {
@@ -102,6 +115,7 @@
     float: right; 
     margin-top: 60px;
     display: inline-block;
+    background: white;
 }
 
 .main-user-name {
@@ -136,6 +150,7 @@
     width: 75%;
     height: 800px;
     float: right;
+
 }
 
 .main-contents {
@@ -144,6 +159,7 @@
     margin-right: 20px;
     margin-left: 20px;
     font-size: 20px;
+    background: white;
 
 }
 
@@ -152,6 +168,7 @@
     width: 23%;
     height: 800px;
     float: left; 
+    background: white;
 }
 
 .main-footer {
@@ -160,6 +177,7 @@
     width: 100%;
     height: 60px;
     display: block;
+    background: white;
 }
 
 //main end
@@ -187,9 +205,7 @@
 
 .add-beer-container {
 	border: 1px solid black;
-	text-align: center;
-	font-size: 30px;
-	line-height: 50px;
+	font-size: 15px;
 	width: 75%;
 	height: 500px;
 	margin-left: auto;
@@ -201,13 +217,44 @@
 }
 
 .add-beer-submit {
-	margin-bottom: 20px;
+	float: right;
+	margin-right: 700px;
+	margin-top: 20px;
+	display: inline-block;
 }
 
 .add-beer-footer {
 	border: 1px solid black;
 	margin-top: 18px;
 	height: 50px;
+}
+
+.searchField {
+	display: inline-block;
+    width: 200px;
+    margin-top: 20px;
+}
+
+#theForm {
+	display: inline-block;
+}
+
+#results {
+    display: none;
+    position: absolute;
+    width: 200px;
+
+}
+#results div {
+    position: absolute;
+    width: 200px; 
+    height: 15px;
+    cursor: pointer;
+}
+#results div span {
+    color: red;
+    font-weight: bold;
+
 }
 
 //add beer ends
