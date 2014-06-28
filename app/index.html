@@ -13,6 +13,8 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+
+
         
         <!-- endbuild -->
     </head>
@@ -71,37 +73,41 @@
 <!-- main start -->
 
         <script type="text/template" class="main-view-temp">
-        <h1 class="main-header">
-        <div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"></img>
-        </div>
-        Tapped
-        <div class="main-user">User name/Sign In</div>
-    </h1>
+            <h1 class="main-header">
+                <div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"></img>
+                </div>
+                Tapped
+                <div class="main-user">User name/Sign In</div>
+            </h1>
 
-    <div class="main-container">WELCOME VIEW / MAIN VIEW 
-        <button class="beer-button">Add A Beer!</button>
-        <div class="main-contents">
-            <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
-            <img class="arrows" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/blue-jelly-icons-arrows/007388-blue-jelly-icon-arrows-arrows-up-down1.png" width="150">
+            <div class="main-container">WELCOME VIEW / MAIN VIEW 
+                <button class="beer-button">Add A Beer!</button>
+                <div class="main-contents">
+                    <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
+                    <img class="arrows" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/blue-jelly-icons-arrows/007388-blue-jelly-icon-arrows-arrows-up-down1.png" width="150">
 
-            <div class="main-score">The users score</div>
-            <div class="main-user-name">User Name</div>
-            <div class="main-example">Name and description of Beer</div>
-        </div>  
-            <button class="main-delete-button">Delete</button>
-    </div>
+                    <div class="main-score">The users score</div>
+                    <div class="main-user-name">User Name</div>
+                    <div class="main-example">Name and description of Beer</div>
+                </div>  
+                <button class="main-delete-button">Delete</button>
+            </div>
 
-    <div class="main-sidebar">
-        <ul class="place-list">
-            <li>Barleys</li>
-            <li>Community Tap</li>
-            <li>Greenville Beer Exchange</li>
+            <div class="main-footer">footer goes here!</div>
+        </script>
+
+        <script type="text/template" class="place-view-temp"></script>
+            <div class="main-sidebar">
+                <ul class="place-list">
+                    <li>Barleys</li>
+                    <li>Community Tap</li>
+                    <li>Greenville Beer Exchange</li>
+                    
+                </ul>
+            </div>
+        
             
-        </ul>
-    </div>
-
-    <div class="main-footer">footer goes here!</div>
-    </script>
+    
 
 <!-- main end -->
 
@@ -177,8 +183,8 @@
         
         <!-- endbower -->
         <!-- endbuild -->
-
         <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -194,6 +200,7 @@
         <script src="scripts/model.js"></script>
         <script src="scripts/signInView.js"></script>
         <script src="scripts/signUpView.js"></script>
+        <script src="scripts/placeView.js"></script>
         <script src="scripts/mainView.js"></script>
         <script src="scripts/AddBeer.js"></script>
         <script src="scripts/userView.js"></script>

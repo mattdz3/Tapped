@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 var SignInView = Parse.View.extend({
 
 	template: _.template($('.sign-in-temp').text()),
@@ -44,3 +46,4 @@ var SignInView = Parse.View.extend({
 })
 
 var signIn = new SignInView();
+
