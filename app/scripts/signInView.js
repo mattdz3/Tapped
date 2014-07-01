@@ -8,23 +8,16 @@ var SignInView = Parse.View.extend({
 
 	events: {
 		"click .sign-in-button" : "renderWelcome",
-		"click .sign-up-button" : "renderSignUp"
 
 	},
 
 	initialize: function() {
-		$('.new-views').append(this.el)
-		// this.render();		
+		$('.new-views').append(this.el)		
 	},
 
 	render: function() {
 		var renderTemp = this.template(this.model)
 		this.$el.html(renderTemp);
-	},
-
-	renderSignUp: function() {
-		// this.remove();
-		// var signUpView = new SignUpView();
 	},
 
 	renderWelcome: function() {
@@ -40,10 +33,7 @@ var SignInView = Parse.View.extend({
 				alert("Error" + error.code + " " + error.message)
 			}
 		})
-		this.remove();
-		var welcomeView = new MainView();
 	},
 })
 
-var signIn = new SignInView();
 

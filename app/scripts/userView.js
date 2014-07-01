@@ -5,7 +5,7 @@ var UserView = Parse.View.extend({
 	template: _.template($('.user-view-temp').text()),
 
 	events: {
-		"click .user-home-button" : "renderHome",
+		
 	},
 
 	initialize: function() {
@@ -19,9 +19,4 @@ var UserView = Parse.View.extend({
 		return this;
 	},
 
-	renderHome: function() {
-		this.remove();
-
-		var welcomeView = new MainView();
-	}
 })
