@@ -14,7 +14,7 @@ var SignInView = Parse.View.extend({
 
 	initialize: function() {
 		$('.new-views').append(this.el)
-		this.render();		
+		// this.render();		
 	},
 
 	render: function() {
@@ -23,8 +23,8 @@ var SignInView = Parse.View.extend({
 	},
 
 	renderSignUp: function() {
-		this.remove();
-		var signUpView = new SignUpView();
+		// this.remove();
+		// var signUpView = new SignUpView();
 	},
 
 	renderWelcome: function() {

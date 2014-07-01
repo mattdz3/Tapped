@@ -10,7 +10,7 @@ var PlaceView = Parse.View.extend({
 
 	initialize: function() {
 		$('.render-location-view').append(this.el)
-		this.render();
+		// this.render();
 	},
 
 	render: function() {

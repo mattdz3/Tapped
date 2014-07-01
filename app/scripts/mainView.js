@@ -12,16 +12,16 @@ var MainView = Parse.View.extend({
 
 	initialize: function() {
 		$('.render-main-view').append(this.el)
-		this.render();
+		// this.render();
 
-		var placeCollection = new PlaceCollection();
+	// 	var placeCollection = new PlaceCollection();
 
-		placeCollection.fetch({add: true}).done(function() {
-			placeCollection.each(function(placeModel) {
-				new PlaceView({model: placeModel});
-			})
-		})
-	},
+	// 	placeCollection.fetch({add: true}).done(function() {
+	// 		placeCollection.each(function(placeModel) {
+	// 			new PlaceView({model: placeModel});
+	// 		})
+	// 	})
+	 },
 
 	render: function() {
 		var renderTemp = this.template(this.model)

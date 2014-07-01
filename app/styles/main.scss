@@ -104,7 +104,13 @@ body {
     float: right;
     height: 10px;
     font-size: 15px;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.main-login {
+	float: left;
+	font-size: 15px;
+	margin-left: 20px;
 }
 
 .beer-button {
@@ -221,7 +227,7 @@ body {
 
 .add-beer-submit {
 	float: right;
-	margin-right: 700px;
+	margin-right: 100px;
 	margin-top: 20px;
 	display: inline-block;
 }
@@ -259,6 +265,39 @@ body {
     margin-left: 70px;
 }
 #results div span {
+    color: red;
+    font-weight: bold;
+}
+
+.searchField2 {
+	display: inline-block;
+    width: 200px;
+    margin-top: 20px;
+}
+
+#theForm2 {
+	margin-left: 40px;
+	display: inline-block;
+}
+
+#results2 {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    margin-left: 325px;
+    overflow: scroll;
+
+}
+
+#results2 div {
+    position: absolute;
+    width: 200px; 
+    height: 15px;
+    cursor: pointer;
+    margin-left: 70px;
+}
+#results2 div span {
     color: red;
     font-weight: bold;
 

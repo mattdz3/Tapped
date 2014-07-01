@@ -30,7 +30,7 @@
 
        <script type="text/template" class="sign-in-temp">
         <h1 class="header">Tapped
-            <div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></img>
+            <a href="#home"><div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></a>
             </div>
         </h1>
 
@@ -41,11 +41,11 @@
 
                 <input class="password" placeholder="password"></input>
 
-                <button class="sign-in-button">Sign In</button>
+                <a href="#home"><button class="sign-in-button">Sign In</button></a>
 
                 <div class="sign-up">Not Regeistered? No Problem!</div>
 
-                <button class="sign-up-button">Click here to sign up!</button>
+                <a href="#signup"<button class="sign-up-button">Click here to sign up!</button></a>
             </div>
         </div>
         </script>
@@ -53,7 +53,7 @@
 
         <script type="text/template" class="sign-up-temp">
             <h1 class="header">Tapped
-                <div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></img>
+                <a href="#home"><div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></a>
                 </div>
             </h1>
 
@@ -64,7 +64,7 @@
 
                     <input class="password" placeholder="Create a password"></input>
 
-                    <button class="sign-in-button">Create Account</button>
+                    <a href="#home"><button class="sign-in-button">Create Account</button></a>
                 </div>
             </div>
         </script>
@@ -82,15 +82,16 @@
         <script type="text/template" class="main-view-temp">
 
         <h1 class="main-header">
-                <div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"> 
-                    <div class="main-user">User name/Sign In</div>
+                <a href="#home"><div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"></a> 
+                    <a href="#user"><div class="main-user">User name</div></a>
+                    <a href="#login"><div class="main-login"> Login </div></a>
                 </div>
                
             </h1>
             
             <div class="main-container">WELCOME VIEW / MAIN VIEW 
 
-                <button class="beer-button">Add A Beer!</button>
+                <a href="#add"><button class="beer-button">Add A Beer!</button></a>
                 <div class="main-contents">
                     <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
                     <img class="arrows" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/blue-jelly-icons-arrows/007388-blue-jelly-icon-arrows-arrows-up-down1.png" width="150">
@@ -110,7 +111,7 @@
 
             <div class="main-sidebar">
                 <ul class="place-list">
-                    <li> hi </li>
+                    <li></li>
                 </ul>
             </div>
         </script>
@@ -122,12 +123,12 @@
 <!-- add beer view start, ends on 145 -->
 
     <script type="text/template" class="add-beer-temp">
-        <h1 class="add-beer-header">Tapped
-            <div class="add-beer-user">User Name</div>
+        <h1 class="add-beer-header"> Tapped </a>
+            <a href="#user"><div class="add-beer-user">User Name</div>
 
-            <div class="add-beer-logo"> <img src="images/tapped-logo.jpg" height="80px"></img>
+            <a href="#home"><div class="add-beer-logo"> <img src="images/tapped-logo.jpg" height="80px"></a>
             </div>
-            <button class="add-beer-home">Home</button>
+            <a href="#home"><button class="add-beer-home">Home</button> </a>
 
         </h1>
 
@@ -137,11 +138,16 @@
             </div>
 
             <form id="theForm">
-            Search for: <input placeholder="Search for a beer" name="search" class="searchField"/>
+            Search for: <input placeholder="Search for a brewery" name="search" class="searchField"/>
             </form>
             <div id="results"></div>
                 
             <button class="add-beer-submit">Submit</button> 
+
+            <form id="theForm2">
+            Search for: <input placeholder="Search for a beer they make" name="search" class="searchField2"/>
+            </form>
+            <div id="results2"></div>
         </div>
 
         <div class="add-beer-footer">Footer is down here!</div>
@@ -153,9 +159,9 @@
 
     <script type="text/template" class="user-view-temp">
         <h1 class="user-header">Tapped
-            <div class="user-logo"> <img src="images/tapped-logo.jpg" height="80px"></img>
+            <a href="#home"> <div class="user-logo"> <img src="images/tapped-logo.jpg" height="80px"></a>
             </div>
-            <button class="user-home-button">Home</button>
+            <a href="#home"><button class="user-home-button">Home</button></a>
         </h1>
 
         <div class="user-container">
