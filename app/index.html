@@ -24,6 +24,7 @@
         <![endif]-->
 
         <div class="new-views"></div>
+        
 
 <!-- sign-in and sign-up start, end at 68 -->
 
@@ -72,15 +73,23 @@
 
 <!-- main start -->
 
-        <script type="text/template" class="main-view-temp">
-            <h1 class="main-header">
-                <div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"></img>
-                </div>
-                Tapped
-                <div class="main-user">User name/Sign In</div>
-            </h1>
+            
 
+        <div class="render-main-view"></div>
+        <div class="render-location-view"></div>
+            
+
+        <script type="text/template" class="main-view-temp">
+
+        <h1 class="main-header">
+                <div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"> 
+                    <div class="main-user">User name/Sign In</div>
+                </div>
+               
+            </h1>
+            
             <div class="main-container">WELCOME VIEW / MAIN VIEW 
+
                 <button class="beer-button">Add A Beer!</button>
                 <div class="main-contents">
                     <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
@@ -94,20 +103,19 @@
             </div>
 
             <div class="main-footer">footer goes here!</div>
+            
         </script>
 
-        <script type="text/template" class="place-view-temp"></script>
+        <script type="text/template" class="place-view-temp">
+
             <div class="main-sidebar">
                 <ul class="place-list">
-                    <li>Barleys</li>
-                    <li>Community Tap</li>
-                    <li>Greenville Beer Exchange</li>
-                    
+                    <li> hi </li>
                 </ul>
             </div>
+        </script>
+
         
-            
-    
 
 <!-- main end -->
 
@@ -129,7 +137,7 @@
             </div>
 
             <form id="theForm">
-            Search for: <input name="search" class="searchField"/>
+            Search for: <input placeholder="Search for a beer" name="search" class="searchField"/>
             </form>
             <div id="results"></div>
                 

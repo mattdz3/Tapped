@@ -81,6 +81,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+
 // sign-in and sign-up end
 
 // main start, ends at 165
@@ -95,14 +96,14 @@ body {
 }
 
 .main-logo {
-    float: left;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .main-user {
     float: right;
     height: 10px;
     font-size: 15px;
-    margin-top: 80px;
     margin-right: 10px;
 }
 
@@ -150,7 +151,6 @@ body {
     width: 75%;
     height: 800px;
     float: right;
-
 }
 
 .main-contents {
@@ -160,7 +160,6 @@ body {
     margin-left: 20px;
     font-size: 20px;
     background: white;
-
 }
 
 .main-sidebar {

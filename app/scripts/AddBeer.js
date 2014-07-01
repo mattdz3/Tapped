@@ -41,14 +41,12 @@ var AddBeerView = Parse.View.extend({
 
 
 	findBeer: function() {
-		var lookFor = [
-          "Mexican Cake",
-          "Ten Fiddy",
-          "Herasey",
-          "Milk Stout",
-          "Curmudgeon",
-          "Awesome Craft Beer",
-      	];
+
+		//need to look through all the beers and assign them to an array so i can loop through it
+
+		var searchForBeers = $.get('http://0.0.0.0:3000/api/search?q=all&type=beer');
+
+		var lookFor = 'http://0.0.0.0:3000/api/search?q=' +  + '&type=beer';
 
 	    var form = document.getElementById("theForm");
 	    var resultsDiv = document.getElementById("results");
