@@ -7,7 +7,7 @@ var AddBeerView = Parse.View.extend({
 	events: {
 		"click .add-beer-submit" : "addBeer",
 		"input .searchField" : "findBeer",
-		"input .searchField2" : "findBrewery"
+		"input .search-brewery" : "findBrewery"
 	},
 
 	initialize: function() {
