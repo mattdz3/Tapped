@@ -9,16 +9,8 @@ var MainView = Parse.View.extend({
 	},
 
 	initialize: function() {
-		$('.render-main-view').append(this.el)
-
-	// 	var placeCollection = new PlaceCollection();
-
-	// 	placeCollection.fetch({add: true}).done(function() {
-	// 		placeCollection.each(function(placeModel) {
-	// 			new PlaceView({model: placeModel});
-	// 		})
-	// 	})
-	 },
+		$('.new-views').append(this.el)
+	},
 
 	render: function() {
 		var renderTemp = this.template(this.model)

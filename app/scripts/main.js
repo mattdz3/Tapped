@@ -16,6 +16,22 @@ Parse.initialize("ydeAeqU5zqST1JSp3SnmRnB8u6FmMsf2upM4GzWn", "D8QYFvztU3R2E9uZSa
 var router = new AppRouter();
 Parse.history.start();
 
+var collection = new PlaceCollection();
+
+collection.fetch({
+	success: function(collection) {
+		collection.each(function(object) {
+			console.log(object);
+			new MainView ({model: object.attributes})
+		});
+	},
+	error: function(collection, error) {
+		console.log("error");
+	}
+});
+
+
+
 // var placeObj = new Place();
 // var beerObj = new Beer();
 // var userObj = new User();

@@ -13,7 +13,6 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	initialize: function(options) {
-		console.log("it works! Don't lie to me!")
 		this.currentView = null;
 	},
 
@@ -30,6 +29,7 @@ var AppRouter = Parse.Router.extend({
 	home: function() {
 		var view = new MainView();
 		this.swap(view);
+
 	},
 
 	location: function() {
