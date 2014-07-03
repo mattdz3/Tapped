@@ -22,7 +22,7 @@ collection.fetch({
 	success: function(collection) {
 		collection.each(function(object) {
 			console.log(object);
-			new MainView ({model: object.attributes})
+			new PlaceView ({model: object.attributes})
 		});
 	},
 	error: function(collection, error) {

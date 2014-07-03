@@ -185,6 +185,10 @@ body {
     background: white;
 }
 
+.location-list {
+	margin-left: 20px;
+}
+
 //main end
 
 //add beer view start, ends on 212 
@@ -258,10 +262,10 @@ body {
 
 #results div {
     position: absolute;
-    width: 200px; 
+    width: 800px; 
     height: 15px;
     cursor: pointer;
-    margin-left: 70px;
+    margin-left: 30px;
 }
 #results div span {
     color: red;
