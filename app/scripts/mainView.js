@@ -10,6 +10,8 @@ var MainView = Parse.View.extend({
 
 	initialize: function() {
 		$('.new-views').append(this.el)
+
+		
 	},
 
 	render: function() {

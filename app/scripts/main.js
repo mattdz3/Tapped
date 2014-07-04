@@ -13,23 +13,37 @@
 Parse.initialize("ydeAeqU5zqST1JSp3SnmRnB8u6FmMsf2upM4GzWn", "D8QYFvztU3R2E9uZSaKzby7ZXpJGSHJ2skfECzmC");
 
 
+
 var router = new AppRouter();
 Parse.history.start();
 
 var collection = new PlaceCollection();
 
-collection.fetch({
-	success: function(collection) {
-		collection.each(function(object) {
-			console.log(object);
-			new PlaceView ({model: object.attributes})
+		collection.fetch({
+			success: function(object) {
+				collection.each(function(object) {
+					console.log(object);
+					new PlaceView ({model: object.attributes})
+				});
+			},
+			error: function(collection, error) {
+				console.log("error");
+			}	
 		});
-	},
-	error: function(collection, error) {
-		console.log("error");
-	}
-});
 
+var query = new Parse.Query(Place);
+query.exists("place");
+query.find({
+	success: function(results) {
+	    results.forEach(function(object) {
+	    	$('.location-list').append(object.attributes.place)
+	    })
+      	console.log(results);
+  	},
+  	error: function(error) {
+    	alert("Error: " + error.code + " " + error.message);
+  	}
+});
 
 
 // var placeObj = new Place();

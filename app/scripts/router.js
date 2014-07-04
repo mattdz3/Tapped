@@ -29,7 +29,6 @@ var AppRouter = Parse.Router.extend({
 	home: function() {
 		var view = new MainView();
 		this.swap(view);
-
 	},
 
 	location: function() {

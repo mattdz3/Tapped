@@ -22,11 +22,6 @@ var AddBeerView = Parse.View.extend({
 		return this;
 	},
 
-	addBeer: function() {
-
-
-	},
-
 	findBeer: function() {
 
 		var lookFor = makeArray;
@@ -79,10 +74,15 @@ var AddBeerView = Parse.View.extend({
 		var newList = $.get('http://0.0.0.0:3000/api/search?q=' + newBrewery + '&type=beer').done(function(beers){
 
 			var setArray = beers.data;
-			makeArray = _.pluck(setArray, "name");
+			makeArray = _.pluck(setArray, "name")
 			console.log(makeArray);
+		});
+	},
 
-		});	
+	addBeer: function() {
+		var newBeer = $('.searchField').val();
+		var addNewBeer = $('.main-beer-des').add(newBeer)
+
 	},
 })
 
