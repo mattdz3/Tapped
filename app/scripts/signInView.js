@@ -8,11 +8,10 @@ var SignInView = Parse.View.extend({
 
 	events: {
 		"click .sign-in-button" : "renderWelcome",
-
 	},
 
 	initialize: function() {
-		$('.new-views').append(this.el)		
+		$('.new-views').append(this.el)	
 	},
 
 	render: function() {

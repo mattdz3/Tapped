@@ -14,11 +14,13 @@ var AppRouter = Parse.Router.extend({
 
 	initialize: function(options) {
 		this.currentView = null;
+		this.places = new PlaceCollection();
 	},
 
 	logIn: function() {
 		var view = new SignInView();
 		this.swap(view);
+		$('.render-location-view').remove();
 	},
 
 	signUp: function() {
@@ -27,8 +29,22 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	home: function() {
+		$('.place-list').html('')
 		var view = new MainView();
 		this.swap(view);
+
+		this.places.fetch({
+			success: function(locations) {
+				locations.forEach(function(place) {
+					console.log(place);
+					var li = '<li>' + place.attributes.place + '</li>'
+			    	$('.place-list').append(li)
+				});
+			},
+			error: function(collection, error) {
+				console.log("error");
+			}	
+		});
 	},
 
 	location: function() {
@@ -57,3 +73,5 @@ var AppRouter = Parse.Router.extend({
 	},
 })
 
+var router = new AppRouter();
+Parse.history.start();
