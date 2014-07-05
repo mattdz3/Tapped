@@ -35,7 +35,7 @@ var AppRouter = Parse.Router.extend({
 		if(!user) {
 			this.TologIn();
 		} else {
-			var view = new MainView({model: Parse.User.current()});
+			var view = new MainView({model: Parse.User.current().attributes});
 			this.swap(view);
 		}
 

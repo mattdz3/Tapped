@@ -30,7 +30,7 @@
 
        <script type="text/template" class="sign-in-temp">
         <h1 class="header">Tapped
-            <a href="#home"><div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></a>
+            <div class="logo"> <img src="images/tapped-logo.jpg" height="80px">
             </div>
         </h1>
 
@@ -74,25 +74,30 @@
 <!-- main start -->
 
         <h1 class="main-header">
+
             <a href="#home"> <div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"> </div> </a>
-            <div class="main-signout"> Logout </div>
-            <a href="#user"> <div class="main-user"> User name </div> </a>
+            
             <a href="#login"> <div class="main-login"> Login </div> </a>                 
         </h1>
 
-        <div class="main-container"> WELCOME VIEW / MAIN VIEW 
+        <div class="main-container">
 
-            <a href="#add"><button class="beer-button">Add A Beer!</button></a>
+            
 
             <script type="text/template" class="main-view-temp">
 
+                 <div class="main-user"> Hello <a href="#user"><%=username%></a>  
+                 <a href="#add"><button class="beer-button">Add A Beer!</button></a></div>
+                 <a href="#login"> <div class="main-signout"> Logout </div> </a>
                 
                 <div class="main-contents">
                     <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
                     
-                    <div class="main-user-name"> User Name </div>
+                    
                     <div class="main-beer-des"> About Beer </div>
-                    <div class="main-score"> The users score </div>
+
+                    <div class="main-user-name"> <%= username %> </div>
+                    <div class="main-score"> <%= score %> </div>
                     <button class="main-delete-button">Delete</button>
                     
 

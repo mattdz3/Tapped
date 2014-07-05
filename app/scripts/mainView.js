@@ -26,14 +26,5 @@ var MainView = Parse.View.extend({
 
 	signout: function() {
 		Parse.User.logOut();
-		var currentUser = Parse.User.current();
-		
-		// success: function() {
-		// 	console.log("user logged out")
-		// 	router.navigate("logIn", {trigger: true});
-		// },
-		// error: function() {
-		// 	console.log("failed to logout")
-		// }
 	},
 })

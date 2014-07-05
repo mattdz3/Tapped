@@ -102,10 +102,10 @@ body {
 }
 
 .main-user {
-    float: right;
+	margin-top: 20px;
+	margin-left: 20px;
     height: 10px;
-    font-size: 15px;
-    margin-right: 20px;
+    font-size: 25px;
 }
 
 .main-login {
@@ -115,13 +115,15 @@ body {
 }
 
 .main-signout {
-	float: right;
-	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 13px;
 	margin-right: 20px;
 }
 
 .beer-button {
-    margin-left: 170px;
+    float: right;
+    margin-right: 25px;
     cursor: pointer;
 }
 
