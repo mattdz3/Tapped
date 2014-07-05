@@ -15,6 +15,7 @@ var AppRouter = Parse.Router.extend({
 	initialize: function(options) {
 		this.currentView = null;
 		this.places = new PlaceCollection();
+		this.users = new UserCollection();
 	},
 
 	logIn: function() {
@@ -29,8 +30,14 @@ var AppRouter = Parse.Router.extend({
 
 	home: function() {
 		$('.place-list').html('')
-		var view = new MainView();
-		this.swap(view);
+
+		var user = Parse.User.current();
+		if(!user) {
+			this.TologIn();
+		} else {
+			var view = new MainView({model: Parse.User.current()});
+			this.swap(view);
+		}
 
 		this.places.fetch({
 			success: function(locations) {
@@ -43,6 +50,8 @@ var AppRouter = Parse.Router.extend({
 				console.log("error");
 			}	
 		});
+
+
 	},
 
 	location: function() {
@@ -63,6 +72,10 @@ var AppRouter = Parse.Router.extend({
 		var view = new MainView();
 		this.swap(view);
 	},
+
+	TologIn: function(){
+  		router.navigate('logIn', {trigger: true});
+  	},
 
 	swap: function(view) {
 		if (this.currentView) this.currentView.remove();

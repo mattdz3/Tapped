@@ -29,6 +29,8 @@ var SignUpView = Parse.View.extend({
 				if (currentUser) {
 					router.navigate('home', {trigger: true});
 					console.log(currentUser)
+				} else {
+					console.log("did not sign up")
 				}
 			},
 			error: function(user, error) {

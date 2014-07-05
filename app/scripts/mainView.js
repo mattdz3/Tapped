@@ -10,7 +10,7 @@ var MainView = Parse.View.extend({
 	},
 
 	initialize: function() {
-		$('.new-views').append(this.el)
+		$('.main-container').append(this.el)
 
 	},
 
@@ -27,10 +27,13 @@ var MainView = Parse.View.extend({
 	signout: function() {
 		Parse.User.logOut();
 		var currentUser = Parse.User.current();
-		console.log("user logged out")
+		
+		// success: function() {
+		// 	console.log("user logged out")
+		// 	router.navigate("logIn", {trigger: true});
+		// },
+		// error: function() {
+		// 	console.log("failed to logout")
+		// }
 	},
-
 })
-
-
-

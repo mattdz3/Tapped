@@ -122,18 +122,23 @@ body {
 
 .beer-button {
     margin-left: 170px;
+    cursor: pointer;
+}
+
+.beer {
+	float: left;
 }
 
 .main-beer-des {
-    width: 300px;
-    float: right; 
+    width: 200px;
+    float: left; 
     margin-top: 60px;
     display: inline-block;
     background: white;
 }
 
 .main-user-name {
-    float: right;
+    float: left;
     width: 130px;
     margin-top: 60px;
     margin-left: 10px;
@@ -144,18 +149,29 @@ body {
     display: inline-block;
     margin-top: 60px;
     width: 200px;
-    float: right;
+    float: left;
 }
 
 .main-delete-button {
     float: right;
     display: inline-block;
-    margin-right: 20px;
+    cursor: pointer;
 }
 
-.arrows {
+.up-arrow {
     display: inline-block;
     float: right;
+    padding-top: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.down-arrow {
+	display: block;
+	float: right;
+	padding-top: 50px;
+	margin-right: 10px;
+	cursor: pointer;
 }
 
 .main-container {
@@ -168,6 +184,7 @@ body {
 
 .main-contents {
     border: 1px solid black;
+    height: 150px;
     margin-top: 40px;
     margin-right: 20px;
     margin-left: 20px;
@@ -192,8 +209,9 @@ body {
     background: white;
 }
 
-.location-list {
-	margin-left: 20px;
+.place-list {
+	margin-left: 10px;
+	cursor: pointer;
 }
 
 //main end
