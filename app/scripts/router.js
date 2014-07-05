@@ -20,7 +20,6 @@ var AppRouter = Parse.Router.extend({
 	logIn: function() {
 		var view = new SignInView();
 		this.swap(view);
-		$('.render-location-view').remove();
 	},
 
 	signUp: function() {
@@ -36,7 +35,6 @@ var AppRouter = Parse.Router.extend({
 		this.places.fetch({
 			success: function(locations) {
 				locations.forEach(function(place) {
-					console.log(place);
 					var li = '<li>' + place.attributes.place + '</li>'
 			    	$('.place-list').append(li)
 				});

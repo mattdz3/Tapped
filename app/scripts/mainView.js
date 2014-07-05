@@ -6,12 +6,12 @@ var MainView = Parse.View.extend({
 
 	events: {
 		"click .main-delete-button" : "deleteBeer",
+		"click .main-signout" : "signout",
 	},
 
 	initialize: function() {
 		$('.new-views').append(this.el)
 
-		
 	},
 
 	render: function() {
@@ -22,6 +22,12 @@ var MainView = Parse.View.extend({
 
 	deleteBeer: function() {
 		this.model.destroy();
+	},
+
+	signout: function() {
+		Parse.User.logOut();
+		var currentUser = Parse.User.current();
+		console.log("user logged out")
 	},
 
 })

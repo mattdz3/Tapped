@@ -6,7 +6,7 @@ var Place = Parse.Object.extend('place');
 
 var Beer = Parse.Object.extend('beer');
 
-var User = Parse.Object.extend('user');
+var User = Parse.Object.extend('User');
 
 
 //Collections

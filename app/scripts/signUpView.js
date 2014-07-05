@@ -6,7 +6,6 @@ var SignUpView = Parse.View.extend({
 
 	events: {
 		"click .sign-in-button" : "createUser",
-
 	},
 
 	initialize: function() {
@@ -21,13 +20,16 @@ var SignUpView = Parse.View.extend({
 
 	createUser: function() {
 		var user = new Parse.User();
-		user.set("username", $('.email').val())
+		user.set("username", $('.username').val())
 		user.set("password", $('.password').val())
 
 		user.signUp(null, {
 			success: function(user) {
-				console.log("good job!")
-				
+				var currentUser = Parse.User.current();
+				if (currentUser) {
+					router.navigate('home', {trigger: true});
+					console.log(currentUser)
+				}
 			},
 			error: function(user, error) {
 				alert("Error" + error.code + " " + error.message);
