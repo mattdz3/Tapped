@@ -50,8 +50,6 @@ var AppRouter = Parse.Router.extend({
 				console.log("error");
 			}	
 		});
-
-
 	},
 
 	location: function() {

@@ -62,7 +62,7 @@ var AddBeerView = Parse.View.extend({
 	      // keydown handler
 	    searchField.onkeydown = function() {
 	        while ( resultsDiv.firstChild != null ) {
-	            resultsDiv.removeChild( resultsDiv.firstChild );          
+	            resultsDiv.removeChild( resultsDiv.firstChild );
 	        }
 	        
 	        resultsDiv.style.display = "none";

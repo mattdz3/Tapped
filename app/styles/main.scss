@@ -132,26 +132,27 @@ body {
 }
 
 .main-beer-des {
-    width: 200px;
+    width: 400px;
+    height: 60px;
     float: left; 
     margin-top: 60px;
     display: inline-block;
     background: white;
+    overflow: scroll;
 }
 
 .main-user-name {
-    float: left;
     width: 130px;
     margin-top: 60px;
     margin-left: 10px;
+    margin-right: 10px;
     display: inline-block;
 }
 
 .main-score {
     display: inline-block;
     margin-top: 60px;
-    width: 200px;
-    float: left;
+    width: 50px;
 }
 
 .main-delete-button {

@@ -11,7 +11,6 @@ var MainView = Parse.View.extend({
 
 	initialize: function() {
 		$('.main-container').append(this.el)
-
 	},
 
 	render: function() {

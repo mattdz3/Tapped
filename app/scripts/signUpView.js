@@ -22,6 +22,7 @@ var SignUpView = Parse.View.extend({
 		var user = new Parse.User();
 		user.set("username", $('.username').val())
 		user.set("password", $('.password').val())
+		user.set("score", 10)
 
 		user.signUp(null, {
 			success: function(user) {
