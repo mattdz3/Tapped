@@ -42,8 +42,9 @@ var AppRouter = Parse.Router.extend({
 		this.places.fetch({
 			success: function(locations) {
 				locations.forEach(function(place) {
-					var li = '<li>' + place.attributes.place + '</li>'
+					var li = '<li class="beer-location">' + place.attributes.place + '</li>'
 			    	$('.place-list').append(li)
+			    	console.log(place.attributes)
 				});
 			},
 			error: function(collection, error) {

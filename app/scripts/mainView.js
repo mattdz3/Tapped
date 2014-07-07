@@ -6,17 +6,23 @@ var MainView = Parse.View.extend({
 
 	events: {
 		"click .main-delete-button" : "deleteBeer",
-		"click .main-signout" : "signout",
+		"click .main-signout"       : "signout",
+		"click .beer-location"      : "renderBeerLocation",
 	},
 
 	initialize: function() {
 		$('.main-container').append(this.el)
+
 	},
 
 	render: function() {
 		var renderTemp = this.template(this.model)
 		this.$el.html(renderTemp);
 		return this;
+	},
+
+	renderBeerLocation: function() {
+		
 	},
 
 	deleteBeer: function() {

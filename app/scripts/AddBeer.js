@@ -81,8 +81,13 @@ var AddBeerView = Parse.View.extend({
 
 	addBeer: function() {
 		var newBeer = $('.searchField').val();
-		var addNewBeer = $('.main-beer-des').add(newBeer)
+		console.log(newBeer)
+		var beerArrayCollection = new BeerCollection();
 
+		beerArrayCollection.add([
+			{"beer" : newBeer},
+			]);
+		console.log("fuck!")
 	},
 })
 

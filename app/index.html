@@ -14,6 +14,7 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
 
+        <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
 
         
         <!-- endbuild -->
@@ -23,15 +24,14 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="new-views"></div>
+         <div class="new-views"></div> 
         
 
 <!-- sign-in and sign-up start, end at 68 -->
 
        <script type="text/template" class="sign-in-temp">
         <h1 class="header">Tapped
-            <div class="logo"> <img src="images/tapped-logo.jpg" height="80px">
-            </div>
+         
         </h1>
 
         <div class="container">
@@ -39,7 +39,7 @@
                 <input class="username" placeholder="log in with your username">
                 </input> 
 
-                <input class="password" placeholder="password"></input>
+                <input type="password" class="password" placeholder="password"></input>
 
                 <button class="sign-in-button">Sign In</button>
 
@@ -52,10 +52,8 @@
 
 
         <script type="text/template" class="sign-up-temp">
-            <h1 class="header">Tapped
-                <a href="#login"><div class="logo"> <img src="images/tapped-logo.jpg" height="80px"></a>
-                </div>
-            </h1>
+            <a href="#login"><h1 class="header">Tapped
+            </h1></a>
 
             <div class="container">
                 <div class="sign">Welcome!
@@ -75,39 +73,38 @@
 
         <h1 class="main-header">
 
-            <a href="#home"> <div class="main-logo"> <img src="images/tapped-logo.jpg" height="140px"> </div> </a>
+           <div class="main-logo"> Tapped </div>
             
             <a href="#login"> <div class="main-login"> Login </div> </a>                 
         </h1>
 
         <div class="main-container">
 
-            
-
             <script type="text/template" class="main-view-temp">
 
                  <div class="main-user"> Hello <a href="#user"><%=username%></a>  
-                 <a href="#add"><button class="beer-button">Add A Beer!</button></a></div>
+                 <a href="#add"><button class="beer-button">Add A Beer!</button></a>
+                 </div>
+
                  <a href="#login"> <div class="main-signout"> Logout </div> </a>
                 
+
                 <div class="main-contents">
                     <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
                     
                     
-                    <div class="main-beer-des"> About Beer lorem nt: If there is more than one target element, however, cloned copies of the inserted element will be created for each target except for the last one.</div>
+                    <div class="main-beer-des">  </div>
 
                     <div class="main-user-name"> By: <%= username %> </div>
                     <div class="main-score"> <%= score %> </div>
                     <button class="main-delete-button">Delete</button>
                     
-
-
                     <img class="down-arrow" src="images/downArrow.png" width="50">
                     
                     <img class="up-arrow" src="images/upArrow.png" width="50">
-        </div>
+                </div>
 
-        </script>
+            </script>
 
         </div>
 
