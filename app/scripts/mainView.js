@@ -8,6 +8,8 @@ var MainView = Parse.View.extend({
 		"click .main-delete-button" : "deleteBeer",
 		"click .main-signout"       : "signout",
 		"click .beer-location"      : "renderBeerLocation",
+		"click .up-arrow"           : "upVote",
+		"click .down-arrow"         : "downVote",
 	},
 
 	initialize: function() {
@@ -21,8 +23,16 @@ var MainView = Parse.View.extend({
 		return this;
 	},
 
+	upVote: function() {
+		console.log(currentUser.attributes.score)
+	},
+
+	downVote: function() {
+		console.log(currentUser.attributes.score)
+	},
+
 	renderBeerLocation: function() {
-		
+
 	},
 
 	deleteBeer: function() {

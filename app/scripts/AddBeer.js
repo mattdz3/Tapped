@@ -1,6 +1,8 @@
 "use strict";
 
 var makeArray;
+var setArray;
+var newList;
 
 var AddBeerView = Parse.View.extend({
 
@@ -9,7 +11,7 @@ var AddBeerView = Parse.View.extend({
 	events: {
 		"click .add-beer-submit" : "addBeer",
 		"input .searchField"     : "findBeer",
-		"click .save-brewery"    : "findBrewery"
+		"click .save-brewery"    : "findBrewery",
 	},
 
 	initialize: function() {
@@ -71,23 +73,28 @@ var AddBeerView = Parse.View.extend({
 
 	findBrewery: function() {
 		var newBrewery = $("#search-brewery").val();
-		var newList = $.get('http://0.0.0.0:3000/api/search?q=' + newBrewery + '&type=beer').done(function(beers){
-
-			var setArray = beers.data;
+		newList = $.get('http://0.0.0.0:3000/api/search?q=' + newBrewery + '&type=beer').done(function(beers){
+			
+			setArray = beers.data;
 			makeArray = _.pluck(setArray, "name")
 			console.log(makeArray);
+
+			console.log(setArray);
+
 		});
 	},
 
 	addBeer: function() {
 		var newBeer = $('.searchField').val();
 		console.log(newBeer)
+
 		var beerArrayCollection = new BeerCollection();
 
-		beerArrayCollection.add([
-			{"beer" : newBeer},
-			]);
-		console.log("fuck!")
+		var beerObject = _.findWhere(setArray, {name: newBeer})
+
+		console.log(beerObject)
+
+
 	},
 })
 

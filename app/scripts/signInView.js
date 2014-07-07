@@ -27,7 +27,7 @@ var SignInView = Parse.View.extend({
 				var token = Parse.User.current()._sessionToken;
 				if (currentUser) {
 					router.navigate('home', {trigger: true});
-					console.log(currentUser, currentUser._sessionToken)
+					console.log(currentUser, currentUser._sessionToken, currentUser.attributes.score)
 
 					Parse.User.become(currentUser._sessionToken).then(function (user) {
 			  			console.log("user set")

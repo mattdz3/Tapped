@@ -15,24 +15,6 @@ Parse.initialize("ydeAeqU5zqST1JSp3SnmRnB8u6FmMsf2upM4GzWn", "D8QYFvztU3R2E9uZSa
 
 var currentUser;
 
-// $('.main-signout').click(function() {
-// 	Parse.User.logOut().done(function() {
-// 		new SignInView();
-// 	})
-// })
-
-
-// var placeObj = new Place();
-// var beerObj = new Beer();
-// var userObj = new User();
-
-
-// var beerCollection = new BeerCollection();
-// var userCollection = new UserCollection();
-
-
-
-
 // var barleys = new Parse.GeoPoint({ latitude: 34.850808, longitude: -82.399283 });
 
 // var communityTap = new Parse.GeoPoint({ latitude: 34.862134, longitude: -82.385456 });
