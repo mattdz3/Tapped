@@ -88,13 +88,35 @@ var AddBeerView = Parse.View.extend({
 		var newBeer = $('.searchField').val();
 		console.log(newBeer)
 
-		var beerArrayCollection = new BeerCollection();
+		var beerObject = new Beer();
 
-		var beerObject = _.findWhere(setArray, {name: newBeer})
+		var newBeerObject = _.findWhere(setArray, {name: newBeer})
 
-		console.log(beerObject)
+		console.log(newBeerObject)
 
-
+		// beerObject.save({
+		// 	newBeerObject
+		// }, {
+		// 	success: function(beer) {
+		// 		console.log("Yeah")
+		// 	},
+		// 	error: function(beer, error) {
+		// 		console.log("fail, sad face...")
+		// 	}
+		// });
 	},
 })
 
+		// gameScore.save({
+		//   score: 1337,
+		//   playerName: "Sean Plott",
+		//   cheatMode: false
+		// }, {
+		//   success: function(gameScore) {
+		//     // The object was saved successfully.
+		//   },
+		//   error: function(gameScore, error) {
+		//     // The save failed.
+		//     // error is a Parse.Error with an error code and description.
+		//   }
+		// });
