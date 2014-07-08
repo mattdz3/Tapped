@@ -24,12 +24,99 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-         <div class="new-views"></div> 
+        <div class="new-views"></div> 
+        <div class="signin-container"></div>
+        <h1 class="main-header">
+           <div class="main-logo"> Tapped </div>
+            
+            <a href="#login"> <div class="main-login"> Login </div> </a>                 
+        </h1>
+
+        <div class="main-container"></div>
+        <div class="add-beer-view"></div>
+
+        <div class="render-location-view">
+            <div class="main-sidebar">
+                
+            </div>
+        </div>
+
+        <div class="main-footer">FOOTER</div>
+
         
 
+<!-- main end -->
+
+<!-- add beer view start, ends on 145 -->
 <!-- sign-in and sign-up start, end at 68 -->
 
-       <script type="text/template" class="sign-in-temp">
+<!-- sign-in and sign-up end -->
+
+<!-- main start -->
+
+    <script type="text/template" class="sign-up-temp">
+        <a href="#login"><h1 class="header">Tapped
+        </h1></a>
+
+        <div class="container">
+            <div class="sign">Welcome!
+                <input class="username" placeholder="Create a Username">
+                </input> 
+
+                <input class="password" placeholder="Create a password"></input>
+
+                <button class="sign-in-button">Create Account</button>
+            </div>
+        </div>
+    </script>
+    
+    <script type="text/template" class="sign-up-temp">
+        <a href="#login"><h1 class="header">Tapped
+        </h1></a>
+
+        <div class="container">
+            <div class="sign">Welcome!
+                <input class="username" placeholder="Create a Username">
+                </input> 
+
+                <input class="password" placeholder="Create a password"></input>
+
+                <button class="sign-in-button">Create Account</button>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" class="main-view-temp">
+
+         <div class="main-user"> Hello <a href="#user"><%=username%></a>  
+         <a href="#add"><button class="beer-button">Add A Beer!</button></a>
+         </div>
+
+         <a href="#login"> <div class="main-signout"> Logout </div> </a>
+        
+
+        <div class="main-contents">
+            <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
+            
+            
+            <div class="main-beer-des">  </div>
+
+            <div class="main-user-name"> By: <%= username %> </div>
+            <div class="main-score"> <%= score %> </div>
+            <button class="main-delete-button">Delete</button>
+            
+            <img class="down-arrow" src="images/downArrow.png" width="50">
+            
+            <img class="up-arrow" src="images/upArrow.png" width="50">
+        </div>
+
+    </script>
+
+    <script type="text/template" class="sidebar-temp">
+        <ul class="place-list"> </ul>
+    </script>
+
+    <script type="text/template" class="sign-in-temp">
         <h1 class="header">Tapped
          
         </h1>
@@ -48,108 +135,36 @@
                 <a href="#signup"<button class="sign-up-button">Click here to sign up!</button></a>
             </div>
         </div>
-        </script>
-
-
-        <script type="text/template" class="sign-up-temp">
-            <a href="#login"><h1 class="header">Tapped
-            </h1></a>
-
-            <div class="container">
-                <div class="sign">Welcome!
-                    <input class="username" placeholder="Create a Username">
-                    </input> 
-
-                    <input class="password" placeholder="Create a password"></input>
-
-                    <button class="sign-in-button">Create Account</button>
-                </div>
-            </div>
-        </script>
-
-<!-- sign-in and sign-up end -->
-
-<!-- main start -->
-
-        <h1 class="main-header">
-
-           <div class="main-logo"> Tapped </div>
-            
-            <a href="#login"> <div class="main-login"> Login </div> </a>                 
-        </h1>
-
-        <div class="main-container">
-
-            <script type="text/template" class="main-view-temp">
-
-                 <div class="main-user"> Hello <a href="#user"><%=username%></a>  
-                 <a href="#add"><button class="beer-button">Add A Beer!</button></a>
-                 </div>
-
-                 <a href="#login"> <div class="main-signout"> Logout </div> </a>
-                
-
-                <div class="main-contents">
-                    <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
-                    
-                    
-                    <div class="main-beer-des">  </div>
-
-                    <div class="main-user-name"> By: <%= username %> </div>
-                    <div class="main-score"> <%= score %> </div>
-                    <button class="main-delete-button">Delete</button>
-                    
-                    <img class="down-arrow" src="images/downArrow.png" width="50">
-                    
-                    <img class="up-arrow" src="images/upArrow.png" width="50">
-                </div>
-
-            </script>
-
-        </div>
-
-        <div class="render-location-view">
-            <div class="main-sidebar">
-                <ul class="place-list">
-
-                </ul>
-            </div>
-        </div>
-
-        <div class="main-footer">FOOTER</div>
-
-        
-
-<!-- main end -->
-
-<!-- add beer view start, ends on 145 -->
+    </script>
 
     <script type="text/template" class="add-beer-temp">
         <h1 class="add-beer-header"> Tapped </a>
             <a href="#user"><div class="add-beer-user">User Name</div>
 
-            <a href="#home"><div class="add-beer-logo"> <img src="images/tapped-logo.jpg" height="80px"></a>
-            </div>
+
             <a href="#home"><button class="add-beer-home">Home</button> </a>
         </h1>
 
         <div class="add-beer-container">
             <div class="add-beer-contents">
-                <img class="add-beer-img" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
+                <div class="add-beer-text"> Search for a brewery </div>
             </div>
+
             <div class="brewery-style">
-            <input id="search-brewery" placeholder="Search a brewery">
-            <button class="save-brewery">Save brewery</button>
+                <button class="save-brewery">Save brewery</button>
+                <input id="search-brewery" placeholder="Search a brewery">
+            
             </div>
 
-            <form id="theForm">
-            <input placeholder="Search for a beer" name="search" class="searchField"/>
-            </form>
+            <div class="beer-style">
+                <button class="add-beer-submit">Submit</button>
 
-            <div id="results"></div>
-                
-            <button class="add-beer-submit">Submit</button>
-            
+                <form id="theForm">
+                <input placeholder="Search for a beer" name="search" class="searchField"/>
+                </form>
+
+                <div id="results"></div>
+            </div>    
         </div>
 
         <div class="add-beer-footer">Footer is down here!</div>
@@ -218,6 +233,7 @@
         <script src="scripts/signInView.js"></script>
         <script src="scripts/signUpView.js"></script>
         <script src="scripts/mainView.js"></script>
+        <script src="scripts/SidebarView.js"></script>
         <script src="scripts/AddBeer.js"></script>
         <script src="scripts/userView.js"></script>
         <script src="scripts/router.js"></script>

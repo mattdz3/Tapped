@@ -6,7 +6,7 @@ var AppRouter = Parse.Router.extend({
 		"login"          : "logIn",
 		"signup"         : "signUp",
 		"home"           : "home",
-		"home/:location" : "location",
+		"home/:id"       : "location",
 		"add"            : "addABeer",
 		"user"           : "users",
 		"*acitons"       : "default",
@@ -14,8 +14,6 @@ var AppRouter = Parse.Router.extend({
 
 	initialize: function(options) {
 		this.currentView = null;
-		this.places = new PlaceCollection();
-		this.users = new UserCollection();
 	},
 
 	logIn: function() {
@@ -29,7 +27,8 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	home: function() {
-		$('.place-list').html('')
+		new SidebarView();
+		
 
 		var user = Parse.User.current();
 		if(!user) {
@@ -38,19 +37,6 @@ var AppRouter = Parse.Router.extend({
 			var view = new MainView({model: Parse.User.current().attributes});
 			this.swap(view);
 		}
-
-		this.places.fetch({
-			success: function(locations) {
-				locations.forEach(function(place) {
-					var li = '<li class="beer-location">' + place.attributes.place + '</li>'
-			    	$('.place-list').append(li)
-			    	console.log(place.attributes)
-				});
-			},
-			error: function(collection, error) {
-				console.log("error");
-			}	
-		});
 	},
 
 	location: function() {

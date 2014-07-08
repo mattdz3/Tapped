@@ -93,9 +93,10 @@ var AddBeerView = Parse.View.extend({
 		console.log(newBeerObject)
 
 		beerObject.set("beers", newBeerObject);
+		// beerObject.set('parent', )
 		beerObject.save(null, {		
 			success: function(beer) {
-				console.log("Yeah")
+				console.log("added a beer! Yeah!")
 			},
 			error: function(beer, error) {
 				console.log("fail, sad face...")

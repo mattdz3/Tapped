@@ -6,10 +6,10 @@ body {
 	font-family: 'Crete Round', serif;
 }
 
-// .new-views {
-// 	background: url('http://images8.alphacoders.com/413/413078.jpg');
-// 	background-size: cover;
-// }
+.new-views {
+	background: url('http://images8.alphacoders.com/413/413078.jpg');
+	background-size: cover;
+}
 
 // sign-in and sign-up start, end at 72
 .header {
@@ -129,6 +129,7 @@ body {
 }
 
 .beer-location {
+	margin-left: 30px;
 	cursor: pointer;
 }
 
@@ -223,30 +224,27 @@ body {
 //add beer view start, ends on 212 
 
 .add-beer-header {
-	border: 1px solid black;
+	margin: 0;
 	text-align: center;
 	line-height: 70px;
 	width: 100%;
 	height: 80px;
+	color: rgb(153, 136, 132);
 }
 
 .add-beer-user {
 	float: right;
 	font-size: 15px;
-	margin-top: 35px;
-	margin-right: 10px;
-}
-
-.add-beer-logo {
-	float: left;
+	margin-top: 40px;
+	margin-right: 40px;
 }
 
 .add-beer-home {
+	margin-top: 60px;
 	float: right;
 }
 
 .add-beer-container {
-	border: 1px solid black;
 	font-size: 15px;
 	width: 75%;
 	height: 500px;
@@ -254,33 +252,41 @@ body {
 	margin-right: auto;
 }
 
-.add-beer-img {
-	margin-top: 10px;
+
+.add-beer-text {
+	color: rgb(153, 136, 132);
+	font-size: 25px;
+	margin-top: 100px;
+	margin-left: 600px;
 }
 
 .add-beer-submit {
-	margin-top: 20px;
+	float: right;
+	margin-right: 15px;
 	display: inline-block;
 }
 
 .add-beer-footer {
-	border: 1px solid black;
 	margin-top: 18px;
 	height: 50px;
 }
 
 .searchField {
-	display: inline-block;
-    width: 200px;
-    margin-top: 20px;
-    margin-left: 30px;
+	float: right;
+	display: block;
+    width: 150px;
+    margin-right: 98px;
 }
 
 #theForm {
+	float: right;
 	display: inline-block;
 }
 
 #results {
+	margin-left: 480px;
+	margin-top: 40px;
+	color: white;
     display: none;
     position: absolute;
     width: 500px;
@@ -297,18 +303,34 @@ body {
     margin-left: 30px;
 }
 #results div span {
-    color: red;
+    color: rgb(53, 178, 216);
     font-weight: bold;
 }
 
 #search-brewery {
+	width: 150px;
+	float: right;
 	display: inline-block;
-	margin-top: 20px;
-	margin-left: 30px;
+	margin-right: 80px;
 }
 
 .brewery-style {
-	display: block;
+	float: right;
+	margin-top: 40px;
+	display: inline-block;
+}
+
+.beer-style {
+	height: 20px;
+	width: 800px;
+	margin-top: 20px;
+	margin-right: 200px;
+	float: right;
+}
+
+.save-brewery {
+	float: right;
+	margin-right: 200px;
 }
 
 //add beer ends
