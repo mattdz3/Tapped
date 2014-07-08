@@ -73,7 +73,7 @@ var AddBeerView = Parse.View.extend({
 
 	findBrewery: function() {
 		var newBrewery = $("#search-brewery").val();
-		newList = $.get('http://0.0.0.0:3000/api/search?q=' + newBrewery + '&type=beer').done(function(beers){
+		newList = $.get('http://0.0.0.0:3000/api/search?q=' + newBrewery + '&type=beer').done(function(beers) {
 			
 			setArray = beers.data;
 			makeArray = _.pluck(setArray, "name")
@@ -87,12 +87,12 @@ var AddBeerView = Parse.View.extend({
 	addBeer: function() {
 		var newBeer = $('.searchField').val();
 
-		var beerObject = new Place();
+		var beerObject = new Beer();
 
 		var newBeerObject = _.findWhere(setArray, {name: newBeer})
 		console.log(newBeerObject)
 
-		// beerObject.set("beers", newBeerObject);
+		beerObject.set("beers", newBeerObject);
 		// beerObject.set('parent', beerObject)
 		beerObject.save(null, {		
 			success: function(beer) {
@@ -101,8 +101,29 @@ var AddBeerView = Parse.View.extend({
 			error: function(beer, error) {
 				console.log("fail, sad face...")
 			}
-		});
+		}).done(function() {
+			Parse.User.current().relation("beer").add(beerObject);
+			Parse.User.current().save(null, {
+				success: function() {
+					console.log("saved a beer to current user")
+				},
+				error: function() {
+					console.log("failed to save a beer to a user")
+				}
+			});
+		})
 	},
 })
 
+
+// beerInstance.save().done(function(){
+// 	// important stuff 
+// 	// add the beer to the user's "beers" relation
+// 	Parse.User.current().relation('beers').add(beerInstance);
+// 	Parse.User.current().save()
+
+// 	// add the beer to the bar's tap list
+// 	placeInstance.relation('on-tap').add(beerInstance);
+// 	placeInstance.save()
+// });
 		

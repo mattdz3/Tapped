@@ -13,9 +13,6 @@
 Parse.initialize("ydeAeqU5zqST1JSp3SnmRnB8u6FmMsf2upM4GzWn", "D8QYFvztU3R2E9uZSaKzby7ZXpJGSHJ2skfECzmC");
 
 
-var currentUser;
-
-
 // var barleys = new Parse.GeoPoint({ latitude: 34.850808, longitude: -82.399283 });
 
 // var communityTap = new Parse.GeoPoint({ latitude: 34.862134, longitude: -82.385456 });
