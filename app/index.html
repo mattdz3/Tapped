@@ -54,48 +54,53 @@
 
 <!-- main start -->
 
+        <script type="text/template" class="sign-in-temp">
+                <h1 class="header">Tapped</h1>
+
+                <div class="container">
+                    <div class="sign">Welcome!
+                        <input class="username" placeholder="log in with your username">
+                        </input> 
+
+                        <input type="password" class="password" placeholder="password"></input>
+
+                        <button class="sign-in-button">Sign In</button>
+
+                        <div class="sign-up">Not Regeistered? No Problem!</div>
+
+                        <a href="#signup"<button class="sign-up-button">Click here to sign up!</button></a>
+                    </div>
+                </div>
+            </script>
+
     <script type="text/template" class="sign-up-temp">
         <a href="#login"><h1 class="header">Tapped
         </h1></a>
 
         <div class="container">
-            <div class="sign">Welcome!
+            <div class="sign">Sign up!
                 <input class="username" placeholder="Create a Username">
                 </input> 
 
-                <input class="password" placeholder="Create a password"></input>
+                <input type="password" class="password" placeholder="Create a password"></input>
 
                 <button class="sign-in-button">Create Account</button>
             </div>
         </div>
     </script>
     
-    <script type="text/template" class="sign-up-temp">
-        <a href="#login"><h1 class="header">Tapped
-        </h1></a>
-
-        <div class="container">
-            <div class="sign">Welcome!
-                <input class="username" placeholder="Create a Username">
-                </input> 
-
-                <input class="password" placeholder="Create a password"></input>
-
-                <button class="sign-in-button">Create Account</button>
-            </div>
-        </div>
-    </script>
+    
 
     <script type="text/template" class="main-view-temp">
 
          <div class="main-user"> Hello <a href="#user"><%=username%></a>  
-         <a href="#add"><button class="beer-button">Add A Beer!</button></a>
-         </div>
+            <a href="#add"><button class="beer-button">Add A Beer!</button></a>
+            </div>
 
-         <a href="#login"> <div class="main-signout"> Logout </div> </a>
+            <a href="#login"> <div class="main-signout"> Logout </div> </a>
         
 
-        <div class="main-contents">
+            <div class="main-contents">
             <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
             
             
@@ -109,33 +114,13 @@
             
             <img class="up-arrow" src="images/upArrow.png" width="50">
         </div>
-
     </script>
 
     <script type="text/template" class="sidebar-temp">
         <ul class="place-list"> </ul>
     </script>
 
-    <script type="text/template" class="sign-in-temp">
-        <h1 class="header">Tapped
-         
-        </h1>
-
-        <div class="container">
-            <div class="sign">Welcome!
-                <input class="username" placeholder="log in with your username">
-                </input> 
-
-                <input type="password" class="password" placeholder="password"></input>
-
-                <button class="sign-in-button">Sign In</button>
-
-                <div class="sign-up">Not Regeistered? No Problem!</div>
-
-                <a href="#signup"<button class="sign-up-button">Click here to sign up!</button></a>
-            </div>
-        </div>
-    </script>
+    
 
     <script type="text/template" class="add-beer-temp">
         <h1 class="add-beer-header"> Tapped </a>

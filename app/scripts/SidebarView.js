@@ -25,6 +25,7 @@ var SidebarView = Parse.View.extend({
 			error: function(collection, error) {
 				console.log("error");
 			}	
+
 		}).done(function(){
 			$('.beer-location').click(function(){
 				var location = ($(this).text())
@@ -38,6 +39,5 @@ var SidebarView = Parse.View.extend({
 		this.$el.html(renderTemp);
 		return this;
 	},
-
 
 })

@@ -92,8 +92,8 @@ var AddBeerView = Parse.View.extend({
 		var newBeerObject = _.findWhere(setArray, {name: newBeer})
 		console.log(newBeerObject)
 
-		beerObject.set("beers", newBeerObject);
-		// beerObject.set('parent', )
+		// beerObject.set("beers", newBeerObject);
+		// beerObject.set('parent', beerObject)
 		beerObject.save(null, {		
 			success: function(beer) {
 				console.log("added a beer! Yeah!")
