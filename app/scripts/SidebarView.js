@@ -1,11 +1,13 @@
 "use strict";
 
+var currentLocation;
+
 var SidebarView = Parse.View.extend({
 	
 	template: _.template($('.sidebar-temp').text()),
 
 	events: {
-		"click" : "setUser",
+		"click .beer-locations" : "setPlace",
 	},
 
 	initialize: function() {
@@ -17,17 +19,18 @@ var SidebarView = Parse.View.extend({
 		this.places.fetch({
 			success: function(locations) {
 				locations.forEach(function(place) {
-					var li = '<li class="beer-location">' + place.attributes.place + '</li>'
+					var li = '<li class="beer-locations">' + place.attributes.place + '</li>'
 			    	$('.main-sidebar').append(li)
-			    	console.log(place.attributes.place)
+			    	console.log(place.id)
 				});
 			},
 			error: function(collection, error) {
 				console.log("error");
-			}	
+			}
 
-		}).done(function(){
-			$('.beer-location').click(function(){
+		}).done(function(places){
+			$('.beer-locations').click(function(){
+				console.log(places)
 				var location = ($(this).text())
 				router.navigate('#/home/' + location, {trigger: true})
 			})
@@ -40,8 +43,7 @@ var SidebarView = Parse.View.extend({
 		return this;
 	},
 
-	setUser: function() {
+	setPlace: function() {
 		
 	},
-
 })

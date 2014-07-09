@@ -16,6 +16,10 @@ var AddBeerView = Parse.View.extend({
 
 	initialize: function() {
 		$('.new-views').append(this.el)
+		$('.main-container').hide();
+		$('.main-header').hide();
+		$('.main-footer').hide();
+		$('.main-sidebar').hide();
 	},
 
 	render: function() {
@@ -111,7 +115,17 @@ var AddBeerView = Parse.View.extend({
 				error: function() {
 					console.log("failed to save a beer to a user")
 				}
-			});
+			}).done(function() {
+				placeObject.relation("on-tap").add(beerObject);
+				placeObject.save(null, {
+					success: function() {
+						console.log("woot woot")
+					},
+					error: function() {
+						console.log("no woot woot")
+					}
+				})
+			})
 		})
 	},
 })

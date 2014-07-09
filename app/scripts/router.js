@@ -9,7 +9,7 @@ var AppRouter = Parse.Router.extend({
 		"home/:id"       : "location",
 		"add"            : "addABeer",
 		"user"           : "users",
-		"*acitons"       : "default",
+		"*actions"       : "default",
 	},
 
 	initialize: function(options) {
@@ -45,6 +45,7 @@ var AppRouter = Parse.Router.extend({
 	location: function() {
 		new LocationView();
 		new SidebarView();
+
 			var user = Parse.User.current();
 		if(!user) {
 			this.TologIn();
