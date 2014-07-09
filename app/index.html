@@ -93,7 +93,7 @@
 
     <script type="text/template" class="main-view-temp">
 
-         <div class="main-user"> Hello <a href="#user"><%=username%></a>  
+         <div class="main-user"> Hello <a href="#user"><%= username %></a>  
             <a href="#add"><button class="beer-button">Add A Beer!</button></a>
             </div>
 
@@ -114,6 +114,10 @@
             
             <img class="up-arrow" src="images/upArrow.png" width="50">
         </div>
+    </script>
+
+    <script type="text/template" class="render-location-view">
+        <div class="location-beer-list"> </div>
     </script>
 
     <script type="text/template" class="sidebar-temp">
@@ -219,6 +223,7 @@
         <script src="scripts/signUpView.js"></script>
         <script src="scripts/mainView.js"></script>
         <script src="scripts/SidebarView.js"></script>
+        <script src="scripts/LocationView.js"></script>
         <script src="scripts/AddBeer.js"></script>
         <script src="scripts/userView.js"></script>
         <script src="scripts/router.js"></script>

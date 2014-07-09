@@ -12,6 +12,10 @@ var SignInView = Parse.View.extend({
 
 	initialize: function() {
 		$('.new-views').append(this.el)
+		$('.main-container').hide();
+		$('.main-header').hide();
+		$('.main-footer').hide();
+		$('.main-sidebar').hide();
 	},
 
 	render: function() {
@@ -29,7 +33,15 @@ var SignInView = Parse.View.extend({
 				user.set("password", $('.password').val())
 				user.save(null, {
 					success: function(user) {
-						console.log("user set")
+						var query = new Parse.Query(Parse.User);
+        				query.get(user.id, {
+        					success: function() {
+        						console.log("yeah user set!")
+        					},
+        					error: function() {
+        						console.log("failed")
+        					}
+        				})
 					},
 					error: function(user, error) {
 						console.log("nope")

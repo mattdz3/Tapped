@@ -87,6 +87,7 @@ var AddBeerView = Parse.View.extend({
 	addBeer: function() {
 		var newBeer = $('.searchField').val();
 
+		var placeObject = new Place();
 		var beerObject = new Beer();
 
 		var newBeerObject = _.findWhere(setArray, {name: newBeer})
@@ -102,7 +103,7 @@ var AddBeerView = Parse.View.extend({
 				console.log("fail, sad face...")
 			}
 		}).done(function() {
-			Parse.User.current().relation("beer").add(beerObject);
+			Parse.User.current().relation("beers").add(beerObject);
 			Parse.User.current().save(null, {
 				success: function() {
 					console.log("saved a beer to current user")

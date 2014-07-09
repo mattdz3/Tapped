@@ -5,7 +5,7 @@ var SidebarView = Parse.View.extend({
 	template: _.template($('.sidebar-temp').text()),
 
 	events: {
-
+		"click" : "setUser",
 	},
 
 	initialize: function() {
@@ -38,6 +38,10 @@ var SidebarView = Parse.View.extend({
 		var renderTemp = this.template(this.model)
 		this.$el.html(renderTemp);
 		return this;
+	},
+
+	setUser: function() {
+		
 	},
 
 })

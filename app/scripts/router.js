@@ -27,8 +27,11 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	home: function() {
+		$('.main-container').show();
+		$('.main-header').show();
+		$('.main-footer').show();
+		$('.main-sidebar').show();
 		new SidebarView();
-		
 
 		var user = Parse.User.current();
 		if(!user) {
@@ -40,6 +43,15 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	location: function() {
+		new LocationView();
+		new SidebarView();
+			var user = Parse.User.current();
+		if(!user) {
+			this.TologIn();
+		} else {
+			var view = new MainView({model: Parse.User.current().attributes});
+			this.swap(view);
+		}
 
 	},
 

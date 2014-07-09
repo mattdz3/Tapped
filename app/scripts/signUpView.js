@@ -10,6 +10,10 @@ var SignUpView = Parse.View.extend({
 
 	initialize: function() {
 		$('.new-views').append(this.el)
+		$('.main-container').hide();
+		$('.main-header').hide();
+		$('.main-footer').hide();
+		$('.main-sidebar').hide();
 	},
 
 	render: function() {
