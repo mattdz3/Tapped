@@ -44,6 +44,6 @@ var SidebarView = Parse.View.extend({
 	},
 
 	setPlace: function() {
-		
+		console.log(this.place.id)
 	},
 })

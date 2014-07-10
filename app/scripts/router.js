@@ -31,7 +31,8 @@ var AppRouter = Parse.Router.extend({
 		$('.main-header').show();
 		$('.main-footer').show();
 		$('.main-sidebar').show();
-		new SidebarView();
+		$('.main-sidebar').html('')
+		// new SidebarView();
 
 		var user = Parse.User.current();
 		if(!user) {
@@ -40,11 +41,34 @@ var AppRouter = Parse.Router.extend({
 			var view = new MainView({model: Parse.User.current().attributes});
 			this.swap(view);
 		}
+
+		this.places = new PlaceCollection();
+
+		this.places.fetch({
+			success: function(locations) {
+				locations.forEach(function(place) {
+					var li = '<li class="beer-locations">' + place.attributes.place + '</li>'
+			    	$('.main-sidebar').append(li)
+			    	console.log(place.id)
+				});
+			},
+			error: function(collection, error) {
+				console.log("error");
+			}
+
+		}).done(function(place){
+			$('.beer-locations').click(function(){
+				console.log(place)
+				var location = place.id
+				//($(this).text())
+				router.navigate('#/home/' + location, {trigger: true})
+			})
+		});
 	},
 
 	location: function() {
 		new LocationView();
-		new SidebarView();
+		// new SidebarView();
 
 			var user = Parse.User.current();
 		if(!user) {
