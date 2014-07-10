@@ -32,7 +32,7 @@ var AppRouter = Parse.Router.extend({
 		$('.main-footer').show();
 		$('.main-sidebar').show();
 		$('.main-sidebar').html('')
-		// new SidebarView();
+		new SidebarView();
 
 		var user = Parse.User.current();
 		if(!user) {
@@ -42,33 +42,29 @@ var AppRouter = Parse.Router.extend({
 			this.swap(view);
 		}
 
-		this.places = new PlaceCollection();
+		var query = new Parse.Query(Place);
 
-		this.places.fetch({
-			success: function(locations) {
-				locations.forEach(function(place) {
+		query.find({
+			success: function(places) {
+				places.forEach(function(place) {
 					var li = '<li class="beer-locations">' + place.attributes.place + '</li>'
-			    	$('.main-sidebar').append(li)
-			    	console.log(place.id)
-				});
-			},
-			error: function(collection, error) {
-				console.log("error");
-			}
+					$(".select-location").append(li)
 
-		}).done(function(place){
-			$('.beer-locations').click(function(){
-				console.log(place)
-				var location = place.id
-				//($(this).text())
-				router.navigate('#/home/' + location, {trigger: true})
-			})
-		});
+					$('.beer-locations').click(function() {
+						var locationId = (place.id)
+						router.navigate('#/home/' + locationId, {trigger: true})
+					})
+				})
+			},
+			error: function(places, error) {
+				console.log("nope")
+			}
+		})
 	},
 
 	location: function() {
 		new LocationView();
-		// new SidebarView();
+		new SidebarView();
 
 			var user = Parse.User.current();
 		if(!user) {
