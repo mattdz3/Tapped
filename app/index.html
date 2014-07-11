@@ -43,22 +43,14 @@
 
         <div class="main-footer">FOOTER</div>
 
-        
-
-<!-- main end -->
-
-<!-- add beer view start, ends on 145 -->
-<!-- sign-in and sign-up start, end at 68 -->
-
-<!-- sign-in and sign-up end -->
-
-<!-- main start -->
+<!-- sign-in and sign-up start -->
 
         <script type="text/template" class="sign-in-temp">
                 <h1 class="header">Tapped</h1>
 
                 <div class="container">
-                    <div class="sign">Welcome!
+                    <div class="sign">
+                    <p class="signin-welcome">Welcome!</p>
                         <input class="username" placeholder="log in with your username">
                         </input> 
 
@@ -78,7 +70,8 @@
         </h1></a>
 
         <div class="container">
-            <div class="sign">Sign up!
+            <div class="sign">
+            <p class="signup-welcome">Sign up!</p>
                 <input class="username" placeholder="Create a Username">
                 </input> 
 
@@ -89,47 +82,49 @@
         </div>
     </script>
     
-    
+    <!-- sign-in and sign-up end -->
+
+    <!-- main start -->
 
     <script type="text/template" class="main-view-temp">
 
-         <div class="main-user"> Hello <a href="#user"><%= username %></a>  
+        <div class="main-user"> Hello <a href="#user"></a>  
             <a href="#add"><button class="beer-button">Add A Beer!</button></a>
-            </div>
-
-            <a href="#login"> <div class="main-signout"> Logout </div> </a>
-        
-            <div class="main-contents">
-            <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
-            
-            <div class="main-beer-des">  </div>
-
-            <div class="main-user-name"> By: <%= username %> </div>
-            <div class="main-score"> <%= score %> </div>
-            <button class="main-delete-button">Delete</button>
-            
-            <img class="down-arrow" src="images/downArrow.png" width="50">
-            
-            <img class="up-arrow" src="images/upArrow.png" width="50">
         </div>
+
+        <a href="#login"> <div class="main-signout"> Logout </div> </a>
+        
+        <div class="main-contents">
+            <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150">
+            
+        <div class="main-beer-des">  </div>
+
+        <div class="main-user-name"> By: <%=username%> </div>
+        <div class="main-score"> </div>
+        <button class="main-delete-button">Delete</button>
+            
+        <img class="down-arrow" src="images/downArrow.png" width="50">
+            
+        <img class="up-arrow" src="images/upArrow.png" width="50">
     </script>
 
-        <script type="text/template" class="render-location-view">
-            <div class="location-beer-list"> </div>
-        </script>
+    <script type="text/template" class="render-location-view">
+    </script>
 
-        <script type="text/template" class="sidebar-temp">
-            
-        </script>
+    <script type="text/template" class="sidebar-temp">
+    </script>
 
-    
+    <!-- main end -->
+
+
+    <!-- add beer view start -->
 
     <script type="text/template" class="add-beer-temp">
         <h1 class="add-beer-header"> Tapped 
             <a href="#user"><div class="add-beer-user">User Name</div> </a>
 
 
-            <a href="#home"><button class="add-beer-home">Home</button> </a>
+            <a href="#home"><div class="add-beer-home">Home</div> </a>
         </h1>
 
         <div class="add-beer-container">
@@ -140,12 +135,10 @@
             <div class="brewery-style">
                 <button class="save-brewery">Save brewery</button>
                 <input id="search-brewery" placeholder="Search a brewery">
-            
             </div>
 
             <div class="beer-style">
                 <button class="add-beer-submit">Submit</button>
-
                 <form id="theForm">
                 <input placeholder="Search for a beer" name="search" class="searchField"/>
                 </form>
@@ -159,7 +152,7 @@
 
 <!-- Add beer view ends -->
 
-<!-- User View starts and ends on 182 -->
+<!-- User View starts -->
 
     <script type="text/template" class="user-view-temp">
         <h1 class="user-header">Tapped

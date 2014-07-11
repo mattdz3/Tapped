@@ -9,7 +9,7 @@ var LocationView = Parse.View.extend({
 	},
 
 	initialize: function() {
-		$('.main-container').append(this.el)
+		$('.select-location').append(this.el)
 	},
 
 	render: function() {

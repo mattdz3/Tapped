@@ -49,17 +49,38 @@ var AppRouter = Parse.Router.extend({
 				places.forEach(function(place) {
 					var li = '<li class="beer-locations">' + place.attributes.place + '</li>'
 					$(".select-location").append(li)
-
-					$('.beer-locations').click(function() {
-						var locationId = (place.id)
-						router.navigate('#/home/' + locationId, {trigger: true})
-					})
+					console.log(places)
 				})
+				query.find({
+					success: function(objectIds) {
+						$('.beer-locations').click(function() {
+							objectIds.forEach(function(objectId) {
+								var locationId = (objectId.id)
+								router.navigate('#home/' + locationId, {trigger: true})
+							})	
+						})				
+					},
+
+					error: function(objectId, error) {
+						console.log('nope')
+					}
+				})
+				
 			},
+
 			error: function(places, error) {
 				console.log("nope")
 			}
-		})
+		});
+
+		// var place = new Place();
+
+		// place.relation('on-tap').query().find().done(function(tapList) {
+		// 	tapList.forEach(function(onTap) {
+		// 		var li = '<li class="beers-on-tap">' + onTap + "</li>"
+		// 		$('.location-display').append(li)
+		// 	})
+		// })
 	},
 
 	location: function() {
@@ -73,7 +94,6 @@ var AppRouter = Parse.Router.extend({
 			var view = new MainView({model: Parse.User.current().attributes});
 			this.swap(view);
 		}
-
 	},
 
 	addABeer: function() {

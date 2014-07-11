@@ -37,11 +37,14 @@ body {
 	color: rgb(153, 136, 132);
 } 
 
+.signin-welcome {
+	margin-right: 170px;
+}
+
 .username {
 	display: block;
 	width: 60%;
 	margin-top: 30px;
-	margin-left: auto;
 	margin-right: auto; 
 }
 
@@ -49,7 +52,6 @@ body {
 	display: block;
 	width: 60%;
 	margin-top: 30px;
-	margin-left: auto;
 	margin-right: auto;
 }
 
@@ -57,7 +59,7 @@ body {
 	display: block;
 	margin-top: 30px;
 	width: 30%;
-	margin-left: auto;
+	margin-left: 70px;
 	margin-right: auto;
 }
 
@@ -65,17 +67,20 @@ body {
 	display: block;
 	margin-top: 50px;
 	width: 60%;
-	margin-left: auto;
 	margin-right: auto;
 	font-size: 20px;
+}
+
+.signup-welcome {
+	margin-right: 170px;
 }
 
 .sign-up-button {
 	display: block;
 	margin-top: 30px;
 	width: 60%;
-	margin-left: auto;
 	margin-right: auto;
+	color: rgb(153, 136, 132);
 }
 
 // sign-in and sign-up end
@@ -83,7 +88,6 @@ body {
 // main start, ends at 165
 
 .main-header {
-    border: 1px solid black;
     margin-top: 0;
     width: 100%;
     height: 140px;
@@ -203,6 +207,8 @@ body {
     height: 800px;
     float: left; 
     background: white;
+    padding: 0;
+    margin: 0;
 }
 
 .main-footer {
@@ -225,6 +231,7 @@ body {
 
 .add-beer-header {
 	margin: 0;
+	padding-top: 30px;
 	text-align: center;
 	line-height: 70px;
 	width: 100%;
@@ -237,11 +244,15 @@ body {
 	font-size: 15px;
 	margin-top: 40px;
 	margin-right: 40px;
+	color: #998884;
 }
 
 .add-beer-home {
-	margin-top: 60px;
-	float: right;
+	margin-top: 40px;
+	margin-left: 20px;
+	font-size: 15px;
+	color: #998884;
+	float: left;
 }
 
 .add-beer-container {

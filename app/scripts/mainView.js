@@ -13,6 +13,7 @@ var MainView = Parse.View.extend({
 
 	initialize: function() {
 		$('.main-container').append(this.el)
+
 	},
 
 	render: function() {
@@ -30,7 +31,18 @@ var MainView = Parse.View.extend({
 	},
 
 	deleteBeer: function() {
-		this.model.destroy();
+		var place = new Place();
+		var beer = new Beer();
+
+		place.relation("on-tap").remove(beer);
+		place.save(null, {
+			success: function() {
+				console.log("deleted a beer")
+			},
+			error: function() {
+				console.log("failed")
+			}
+		})
 	},
 
 	signout: function() {

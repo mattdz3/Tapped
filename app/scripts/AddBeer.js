@@ -119,10 +119,10 @@ var AddBeerView = Parse.View.extend({
 				placeObject.relation("on-tap").add(beerObject);
 				placeObject.save(null, {
 					success: function() {
-						console.log("woot woot")
+						console.log("beer saved to place")
 					},
 					error: function() {
-						console.log("no woot woot")
+						console.log("failed to saved beer to place")
 					}
 				})
 			})
@@ -130,15 +130,3 @@ var AddBeerView = Parse.View.extend({
 	},
 })
 
-
-// beerInstance.save().done(function(){
-// 	// important stuff 
-// 	// add the beer to the user's "beers" relation
-// 	Parse.User.current().relation('beers').add(beerInstance);
-// 	Parse.User.current().save()
-
-// 	// add the beer to the bar's tap list
-// 	placeInstance.relation('on-tap').add(beerInstance);
-// 	placeInstance.save()
-// });
-		
