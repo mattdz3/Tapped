@@ -54,7 +54,9 @@ var AppRouter = Parse.Router.extend({
 				query.find({
 					success: function(objectIds) {
 						$('.beer-locations').click(function() {
+
 							objectIds.forEach(function(objectId) {
+								console.log(objectId)
 								var locationId = (objectId.id)
 								router.navigate('#home/' + locationId, {trigger: true})
 							})	
@@ -62,16 +64,18 @@ var AppRouter = Parse.Router.extend({
 					},
 
 					error: function(objectId, error) {
-						console.log('nope')
+						console.log('did not get id')
 					}
 				})
 				
 			},
 
 			error: function(places, error) {
-				console.log("nope")
+				console.log("did not get locations")
 			}
 		});
+
+		//make a relation to a place!!
 
 		// var place = new Place();
 
@@ -84,7 +88,7 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	location: function() {
-		new LocationView();
+		// new LocationView();
 		new SidebarView();
 
 			var user = Parse.User.current();

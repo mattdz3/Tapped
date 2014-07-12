@@ -49,3 +49,4 @@ var MainView = Parse.View.extend({
 		Parse.User.logOut();
 	},
 })
+

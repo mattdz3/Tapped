@@ -2,7 +2,7 @@
 
 var LocationView = Parse.View.extend({
 	
-	template: _.template($('.render-location-view').text()),
+	template: _.template($('.render-location-temp').text()),
 
 	events: {
 

@@ -26,22 +26,24 @@
 
         <div class="new-views"></div> 
         <div class="signin-container"></div>
-        <h1 class="main-header">
-           <div class="main-logo"> Tapped </div>
-            
-            <a href="#login"> <div class="main-login"> Login </div> </a>                 
-        </h1>
 
-        <div class="main-container"></div>
-        <div class="add-beer-view"></div>
-
-        <div class="render-location-view">
-            <div class="main-sidebar">
+        <div class="main-view-container">
+            <h1 class="main-header">
+               <div class="main-logo"> Tapped </div>
                 
-            </div>
+                <a href="#login"> <div class="main-login"> Login </div> </a>                 
+            </h1>
+            <div class="main-container"></div>
+            <div class="main-sidebar"></div>
+            <div class="main-footer">FOOTER</div>
         </div>
-
-        <div class="main-footer">FOOTER</div>
+        
+        
+        <div class="add-beer-view"></div>
+        
+        
+        
+        
 
 <!-- sign-in and sign-up start -->
 
@@ -88,34 +90,35 @@
 
     <script type="text/template" class="main-view-temp">
 
-        <div class="main-user"> Hello <a href="#user"></a>  
+        <div class="main-user"> Hello 
+            <div class="main-username"><a href="#user"> <%=username%> </a> </div>  
             <a href="#add"><button class="beer-button">Add A Beer!</button></a>
         </div>
 
         <a href="#login"> <div class="main-signout"> Logout </div> </a>
         
         <div class="main-contents">
+        <button class="main-delete-button">Delete</button>
             <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150">
             
-        <div class="main-beer-des">  </div>
+        <div class="main-beer-des"> This beer is the SHIT! </div>
 
         <div class="main-user-name"> By: <%=username%> </div>
-        <div class="main-score"> </div>
-        <button class="main-delete-button">Delete</button>
+        <div class="main-score"> <%=score%> </div>
+        
             
         <img class="down-arrow" src="images/downArrow.png" width="50">
             
         <img class="up-arrow" src="images/upArrow.png" width="50">
     </script>
 
-    <script type="text/template" class="render-location-view">
+    <script type="text/template" class="render-location-temp">
     </script>
 
     <script type="text/template" class="sidebar-temp">
     </script>
 
     <!-- main end -->
-
 
     <!-- add beer view start -->
 
