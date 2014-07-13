@@ -12,6 +12,7 @@ var AddBeerView = Parse.View.extend({
 		"click .add-beer-submit" : "addBeer",
 		"input .searchField"     : "findBeer",
 		"click .save-brewery"    : "findBrewery",
+		"click .back-to-brew"    : "goBack",
 	},
 
 	initialize: function() {
@@ -27,6 +28,11 @@ var AddBeerView = Parse.View.extend({
 		var renderTemp = this.template(this.model)
 		this.$el.html(renderTemp);
 		return this;
+	},
+
+	goBack: function() {
+		$('.beer-style').slideUp("slow");
+		$('.brewery-style').slideDown("slow");
 	},
 
 	findBeer: function() {
@@ -98,7 +104,7 @@ var AddBeerView = Parse.View.extend({
 
 		var newBeer = $('.searchField').val();
 
-		var placeObject = Parse.Place.current();
+		var placeObject = new Place();
 		var beerObject = new Beer();
 
 		var newBeerObject = _.findWhere(setArray, {name: newBeer})

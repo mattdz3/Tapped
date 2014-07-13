@@ -53,8 +53,9 @@ var AppRouter = Parse.Router.extend({
 				console.log(places)
 				places.forEach(function(place) {
 					var location = place.attributes.place
-					console.log(location)
-					new SidebarView();
+					// console.log(location)
+					var newLocations = new SidebarView();
+					console.log(newLocations.id)
 					$(".beer-locations").append(location)
 					
 				})
@@ -65,7 +66,7 @@ var AppRouter = Parse.Router.extend({
 						$('.beer-locations').click(function() {
 
 							objectIds.forEach(function(objectId) {
-								console.log(objectId)
+								console.log(objectId.id)
 								var locationId = (objectId.id)
 								router.navigate('#home/' + locationId, {trigger: true})
 							})	

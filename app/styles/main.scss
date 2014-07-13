@@ -57,6 +57,10 @@ body {
 
 .sign-in-button {
 	display: block;
+	border: 0;
+	background: #939393;
+    color: #201F1E;
+    border-radius: 6px;
 	margin-top: 30px;
 	width: 30%;
 	margin-left: 70px;
@@ -208,6 +212,10 @@ body {
     display: inline-block;
     margin-top: 4px;
     margin-right: 4px;
+    background: #939393;
+    color: #201F1E;
+    border: 0;
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -337,7 +345,7 @@ body {
 	float: right;
 	display: block;
     width: 150px;
-    margin-right: 98px;
+    margin-right: 58px;
 }
 
 #theForm {
@@ -397,6 +405,14 @@ body {
     color: #201F1E;
     border-radius: 6px;
 	margin-right: 200px;
+}
+
+.back-to-brew {
+	border: 0;
+	background: #939393;
+    color: #201F1E;
+    border-radius: 6px;
+    float: right;
 }
 
 //add beer ends
