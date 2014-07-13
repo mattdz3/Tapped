@@ -13,6 +13,7 @@ var MainView = Parse.View.extend({
 
 	initialize: function() {
 		$('.main-container').append(this.el)
+		$('.add-beer-container').hide();
 
 	},
 

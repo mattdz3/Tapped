@@ -16,6 +16,7 @@ var SignInView = Parse.View.extend({
 		$('.main-header').hide();
 		$('.main-footer').hide();
 		$('.main-sidebar').hide();
+		$('.add-beer-container').hide();
 	},
 
 	render: function() {

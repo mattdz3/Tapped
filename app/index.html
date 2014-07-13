@@ -34,14 +34,13 @@
                 <a href="#login"> <div class="main-login"> Login </div> </a>                 
             </h1>
             <div class="main-container"></div>
-            <div class="main-sidebar"></div>
+            <ul class="main-sidebar"></ul>
             <div class="main-footer">FOOTER</div>
         </div>
         
-        
         <div class="add-beer-view"></div>
         
-        
+        <div class="user-view"></div>
         
         
 
@@ -91,7 +90,7 @@
     <script type="text/template" class="main-view-temp">
 
         <div class="main-user"> Hello 
-            <div class="main-username"><a href="#user"> <%=username%> </a> </div>  
+            <div class="main-username"> <%=username%>  </div>  
             <a href="#add"><button class="beer-button">Add A Beer!</button></a>
         </div>
 
@@ -124,7 +123,7 @@
 
     <script type="text/template" class="add-beer-temp">
         <h1 class="add-beer-header"> Tapped 
-            <a href="#user"><div class="add-beer-user">User Name</div> </a>
+            <div class="add-beer-user"><%=Parse.User.current().attributes.username%></div> 
 
 
             <a href="#home"><div class="add-beer-home">Home</div> </a>
@@ -132,7 +131,7 @@
 
         <div class="add-beer-container">
             <div class="add-beer-contents">
-                <div class="add-beer-text"> Search for a brewery </div>
+                <div class="add-beer-text"> Search for a brewery then a beer! </div>
             </div>
 
             <div class="brewery-style">
@@ -140,7 +139,7 @@
                 <input id="search-brewery" placeholder="Search a brewery">
             </div>
 
-            <div class="beer-style">
+            <div class="beer-style" style="display: none;">
                 <button class="add-beer-submit">Submit</button>
                 <form id="theForm">
                 <input placeholder="Search for a beer" name="search" class="searchField"/>
@@ -159,8 +158,6 @@
 
     <script type="text/template" class="user-view-temp">
         <h1 class="user-header">Tapped
-            <a href="#home"> <div class="user-logo"> <img src="images/tapped-logo.jpg" height="80px"></a>
-            </div>
             <a href="#home"><button class="user-home-button">Home</button></a>
         </h1>
 
@@ -171,17 +168,12 @@
                     <div class="user-score">Your Score</div>
                 </div>
             </div>
-            <div class="user-contents-again">
-                <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
-                <div class="user-example">You liked this beer this user added!
-                    <div class="user-score">Users Score</div>
-                </div>
-            </div>
+            
         </div>
 
         <div class="user-sidebar">
             <img src="https://farmly.net/static/images/user-placeholder.jpg"></img>
-            <div class="user-name">User Name</div>
+            <div class="user-name">username</div>
             <div class="user-date">Date Joined</div>
             <div class="user-score2">Score</div>
         </div>

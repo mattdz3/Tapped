@@ -1,5 +1,7 @@
 "use strict";
 
+var location;
+
 var AppRouter = Parse.Router.extend({
 
 	routes: {
@@ -32,13 +34,15 @@ var AppRouter = Parse.Router.extend({
 		$('.main-footer').show();
 		$('.main-sidebar').show();
 		$('.main-sidebar').html('')
-		new SidebarView();
+
+		
 
 		var user = Parse.User.current();
 		if(!user) {
 			this.TologIn();
 		} else {
 			var view = new MainView({model: Parse.User.current().attributes});
+			
 			this.swap(view);
 		}
 
@@ -46,11 +50,16 @@ var AppRouter = Parse.Router.extend({
 
 		query.find({
 			success: function(places) {
+				console.log(places)
 				places.forEach(function(place) {
-					var li = '<li class="beer-locations">' + place.attributes.place + '</li>'
-					$(".select-location").append(li)
-					console.log(places)
+					var location = place.attributes.place
+					console.log(location)
+					new SidebarView();
+					$(".beer-locations").append(location)
+					
 				})
+
+					
 				query.find({
 					success: function(objectIds) {
 						$('.beer-locations').click(function() {
@@ -75,7 +84,9 @@ var AppRouter = Parse.Router.extend({
 			}
 		});
 
-		//make a relation to a place!!
+		
+
+//make a relation to a place!!
 
 		// var place = new Place();
 
@@ -91,7 +102,7 @@ var AppRouter = Parse.Router.extend({
 		// new LocationView();
 		new SidebarView();
 
-			var user = Parse.User.current();
+		var user = Parse.User.current();
 		if(!user) {
 			this.TologIn();
 		} else {
@@ -103,6 +114,14 @@ var AppRouter = Parse.Router.extend({
 	addABeer: function() {
 		var view = new AddBeerView();
 		this.swap(view);
+
+		var user = Parse.User.current();
+		if(!user) {
+			this.TologIn();
+		} else {
+			var view = new AddBeerView({model: Parse.User.current().attributes});
+			this.swap(view);
+		}
 	},
 
 	users: function() {
