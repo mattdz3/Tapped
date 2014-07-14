@@ -1,5 +1,6 @@
 "use strict";
 
+var beerObject;
 var makeArray;
 var setArray;
 var newList;
@@ -105,8 +106,8 @@ var AddBeerView = Parse.View.extend({
 
 		var newBeer = $('.searchField').val();
 
-		var placeObject = new Place();
-		var beerObject = new Beer();
+		var currentPlace = new Place();
+		// var beerObject = new Beer();
 
 		var newBeerObject = _.findWhere(setArray, {name: newBeer})
 		console.log(newBeerObject)
@@ -129,8 +130,9 @@ var AddBeerView = Parse.View.extend({
 					console.log("failed to save a beer to a user")
 				}
 			}).done(function() {
-				placeObject.relation("on-tap").add(beerObject);
-				placeObject.save(null, {
+				console.log(currentPlace)
+				currentPlace.relation("on-tap").add(beerObject);
+				currentPlace.save(null, {
 					success: function() {
 						console.log("beer saved to place")
 					},
@@ -144,5 +146,3 @@ var AddBeerView = Parse.View.extend({
 })
 
 
-
-		

@@ -10,6 +10,8 @@
 
 "use strict";
 
+var beerObject;
+
 Parse.initialize("ydeAeqU5zqST1JSp3SnmRnB8u6FmMsf2upM4GzWn", "D8QYFvztU3R2E9uZSaKzby7ZXpJGSHJ2skfECzmC");
 
 

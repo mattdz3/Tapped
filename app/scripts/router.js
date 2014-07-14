@@ -9,7 +9,7 @@ var AppRouter = Parse.Router.extend({
 		"signup"         : "signUp",
 		"home"           : "home",
 		"home/:id"       : "location",
-		"add"            : "addABeer",
+		"add"            : "addBeer",
 		"user"           : "users",
 		"*actions"       : "default",
 	},
@@ -35,8 +35,6 @@ var AppRouter = Parse.Router.extend({
 		$('.main-sidebar').show();
 		$('.main-sidebar').html('')
 
-		
-
 		var user = Parse.User.current();
 		if(!user) {
 			this.TologIn();
@@ -52,7 +50,6 @@ var AppRouter = Parse.Router.extend({
 		query.find({
 			success: function(places) {
 				places.forEach(function(place) {
-					// console.log(place)
 					new SidebarView({model: place});
 				})
 			},
@@ -61,57 +58,47 @@ var AppRouter = Parse.Router.extend({
 				console.log("did not get locations")
 			}
 		});
-
-		
-
-//make a relation to a place!!
-
-		// var place = new Place();
-
-		// place.relation('on-tap').query().find().done(function(tapList) {
-		// 	tapList.forEach(function(onTap) {
-		// 		var li = '<li class="beers-on-tap">' + onTap + "</li>"
-		// 		$('.location-display').append(li)
-		// 	})
-		// })
 	},
 
 	location: function(id) {
-		// new LocationView();
-		// new SidebarView();
 
 		var user = Parse.User.current();
 		if(!user) {
 			this.TologIn();
 		} else {
-			var view = new MainView({model: Parse.User.current().attributes});
+			var view = new LocationView({model: Parse.User.current().attributes});
 			this.swap(view);
 		}
 
-		var query = new Parse.Query(Place);
-		query.equalTo("objectId", id);
-		query.find({
-			success: function(results) {
-				console.log(results)
-				var beersArray = results.beers
-				beersArray.forEach(function(beer){
-					new BeerView({model: beer})
-				})
+		// var query = new Parse.Query(Place);
+		// query.equalTo("objectId", id);
+		// query.find({
+		// 	success: function(results) {
+		// 		console.log(results)
+		// 		var beersArray = results.beers
+		// 		beersArray.forEach(function(beer){
+		// 			new LocationView({model: beer})
+		// 		})
 										
-			},
+		// 	},
 
-			error: function(objectId, error) {
-				console.log('did not get id')
-			}
-		})
+		// 	error: function(objectId, error) {
+		// 		console.log('did not get id')
+		// 	}
+		// })
 
+		// var place = new Place();
+
+		// place.relation('on-tap').query().find().done(function(tapList) {
+		// 	tapList.forEach(function(onTap) {
+		// 		new LocationView({model: beers})
+		// 	})
+		// })
 
 	},
 
-	addABeer: function() {
-		var view = new AddBeerView();
-		this.swap(view);
-
+	addBeer: function(id) {
+		
 		var user = Parse.User.current();
 		if(!user) {
 			this.TologIn();

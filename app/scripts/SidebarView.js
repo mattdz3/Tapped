@@ -24,8 +24,15 @@ var SidebarView = Parse.View.extend({
 	},
 
 	findId: function() {
+		beerObject = new Beer();
 		var currentLocation = this.model.id
 		console.log(currentLocation)
 		router.navigate('#home/' + currentLocation, {trigger: true})
+
+		var setlocation = new Place();
+		setlocation.id = currentLocation;
+
+		beerObject.set("parent", setlocation)
+		console.log(beerObject)
 	},
 })
