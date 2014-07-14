@@ -24,11 +24,21 @@ var MainView = Parse.View.extend({
 	},
 
 	upVote: function() {
-		console.log(currentUser.attributes.score)
+		var userScore = currentUser;
+		var score = currentUser.attributes.score;
+		
+		userScore.set("score", score + 1)
+
+		userScore.save();
 	},
 
 	downVote: function() {
-		console.log(currentUser.attributes.score)
+		var userScore = currentUser;
+		var score = currentUser.attributes.score;
+		
+		userScore.set("score", score - 1)
+
+		userScore.save();
 	},
 
 	deleteBeer: function() {

@@ -34,7 +34,7 @@
                 <a href="#login"> <div class="main-login"> Login </div> </a>                 
             </h1>
             <div class="main-container"></div>
-            <ul class="main-sidebar"></ul>
+            <div class="main-sidebar"></div>
             <div class="main-footer">FOOTER</div>
         </div>
         
@@ -100,9 +100,9 @@
         <button class="main-delete-button">Delete</button>
             <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150">
             
-        <div class="main-beer-des"> This beer is the SHIT! </div>
+        <div class="main-beer-des"> This beer is AWESOME! </div>
 
-        <div class="main-user-name"> By: <%=username%> </div>
+        
         <div class="main-score"> <%=score%> </div>
         
             
@@ -115,6 +115,7 @@
     </script>
 
     <script type="text/template" class="sidebar-temp">
+         <%= this.model.attributes.place %>
     </script>
 
     <!-- main end -->

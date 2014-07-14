@@ -4,18 +4,17 @@ var currentLocation;
 
 var SidebarView = Parse.View.extend({
 
-	tagName: "li",
-
 	className: "beer-locations",
 	
 	template: _.template($('.sidebar-temp').text()),
 
 	events: {
-		"click .beer-locations" : "findId",
+		"click" : "findId",
 	},
 
 	initialize: function() {
 		$('.main-sidebar').append(this.el)
+		this.render();
 	},
 
 	render: function() {
@@ -25,21 +24,8 @@ var SidebarView = Parse.View.extend({
 	},
 
 	findId: function() {
-		// query.find({
-		// 	success: function(objectIds) {
-		// 		$('.beer-locations').click(function() {
-
-		// 			objectIds.forEach(function(objectId) {
-		// 				console.log(objectId)
-		// 				var locationId = (objectId.id)
-		// 				router.navigate('#home/' + locationId, {trigger: true})
-		// 			})	
-		// 		})				
-		// 	},
-
-		// 	error: function(objectId, error) {
-		// 		console.log('did not get id')
-		// 	}
-		// })
+		var currentLocation = this.model.id
+		console.log(currentLocation)
+		router.navigate('#home/' + currentLocation, {trigger: true})
 	},
 })

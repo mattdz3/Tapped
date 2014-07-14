@@ -33,6 +33,7 @@ var AddBeerView = Parse.View.extend({
 	goBack: function() {
 		$('.beer-style').slideUp("slow");
 		$('.brewery-style').slideDown("slow");
+		$('#results').html('');
 	},
 
 	findBeer: function() {
@@ -66,7 +67,7 @@ var AddBeerView = Parse.View.extend({
 	                };
 	                
 	                div.style.top = top + "px";
-	                top += 20;
+	                top += 28;
 	                resultsDiv.appendChild(div);
 	                resultsDiv.style.display = "block";
 	            }

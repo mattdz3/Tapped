@@ -47,37 +47,14 @@ var AppRouter = Parse.Router.extend({
 		}
 
 		var query = new Parse.Query(Place);
+		
 
 		query.find({
 			success: function(places) {
-				console.log(places)
 				places.forEach(function(place) {
-					var location = place.attributes.place
-					// console.log(location)
-					var newLocations = new SidebarView();
-					console.log(newLocations.id)
-					$(".beer-locations").append(location)
-					
+					// console.log(place)
+					new SidebarView({model: place});
 				})
-
-					
-				query.find({
-					success: function(objectIds) {
-						$('.beer-locations').click(function() {
-
-							objectIds.forEach(function(objectId) {
-								console.log(objectId.id)
-								var locationId = (objectId.id)
-								router.navigate('#home/' + locationId, {trigger: true})
-							})	
-						})				
-					},
-
-					error: function(objectId, error) {
-						console.log('did not get id')
-					}
-				})
-				
 			},
 
 			error: function(places, error) {
@@ -99,9 +76,9 @@ var AppRouter = Parse.Router.extend({
 		// })
 	},
 
-	location: function() {
+	location: function(id) {
 		// new LocationView();
-		new SidebarView();
+		// new SidebarView();
 
 		var user = Parse.User.current();
 		if(!user) {
@@ -110,6 +87,25 @@ var AppRouter = Parse.Router.extend({
 			var view = new MainView({model: Parse.User.current().attributes});
 			this.swap(view);
 		}
+
+		var query = new Parse.Query(Place);
+		query.equalTo("objectId", id);
+		query.find({
+			success: function(results) {
+				console.log(results)
+				var beersArray = results.beers
+				beersArray.forEach(function(beer){
+					new BeerView({model: beer})
+				})
+										
+			},
+
+			error: function(objectId, error) {
+				console.log('did not get id')
+			}
+		})
+
+
 	},
 
 	addABeer: function() {
