@@ -107,7 +107,6 @@ var AddBeerView = Parse.View.extend({
 		var newBeer = $('.searchField').val();
 
 		var currentPlace = new Place();
-		// var beerObject = new Beer();
 
 		var newBeerObject = _.findWhere(setArray, {name: newBeer})
 		console.log(newBeerObject)
@@ -131,7 +130,7 @@ var AddBeerView = Parse.View.extend({
 				}
 			}).done(function() {
 				console.log(currentPlace)
-				currentPlace.relation("on-tap").add(beerObject);
+				currentPlace.relation("beers").add(beerObject);
 				currentPlace.save(null, {
 					success: function() {
 						console.log("beer saved to place")

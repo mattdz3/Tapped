@@ -70,30 +70,42 @@ var AppRouter = Parse.Router.extend({
 			this.swap(view);
 		}
 
-		// var query = new Parse.Query(Place);
-		// query.equalTo("objectId", id);
-		// query.find({
-		// 	success: function(results) {
-		// 		console.log(results)
-		// 		var beersArray = results.beers
-		// 		beersArray.forEach(function(beer){
-		// 			new LocationView({model: beer})
-		// 		})
+		var query = new Parse.Query(Place);
+		query.equalTo("objectId", id);
+		query.find({
+			success: function(results) {
+				// console.log(results)
+				// var beersArray = results.beers
+				// beersArray.forEach(function(beer){
+				// 	new LocationView({model: beer})
+				// })
+
+				console.log('results[0] is', results[0])
+
+				results[0].relation('beers').query().find().done(function(tapList) {
+					console.log('tapList is', tapList);
+					tapList.forEach(function(onTap) {
+						new LocationView({model: beers})
+					})
+				})
 										
-		// 	},
+			},
 
-		// 	error: function(objectId, error) {
-		// 		console.log('did not get id')
-		// 	}
-		// })
+			error: function(objectId, error) {
+				console.log('did not get id')
+			}
+		})
 
-		// var place = new Place();
+		var place = new Place();
 
-		// place.relation('on-tap').query().find().done(function(tapList) {
+		// place.relation('beers').query().find().done(function(tapList) {
 		// 	tapList.forEach(function(onTap) {
 		// 		new LocationView({model: beers})
 		// 	})
 		// })
+		// place.save();
+
+		
 
 	},
 
