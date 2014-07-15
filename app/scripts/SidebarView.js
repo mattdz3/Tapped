@@ -30,7 +30,6 @@ var SidebarView = Parse.View.extend({
 		currentPlace = this.model;
 
 		currentLocation = this.model.id
-		console.log(currentLocation)
 		router.navigate('#home/' + currentLocation, {trigger: true})
 
 		var setlocation = new Place();

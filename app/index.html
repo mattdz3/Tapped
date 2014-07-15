@@ -95,11 +95,10 @@
         <div class="main-user">  Hello 
             <div class="main-username"> <%=username%> </div>  
         </div>
-        <a href="#add"><button class="beer-button">Add a Beer</button></a>
 
         <a href="#login"> <div class="main-signout"> Logout </div> </a>
 
-        <p> Welcome to Tapped! <br> Where do you want to go today?</p>
+        <p> Welcome to Tapped! <br> Select a location to see whats on tap!</p>
     </script>
 
 
@@ -112,12 +111,12 @@
         <a href="#login"> <div class="main-signout"> Logout </div> </a>
         <div class="main-contents">
         <button class="main-delete-button">Delete</button>
-            <div class="beer"> <img src="<%=beer.get('beers').labels.medium%>" width="120">  </div>
+            <a href="<%=beer.get('beers').labels.large%>"><div class="beer"> <img src="<%=beer.get('beers').labels.medium%>" width="120"> </div> </a>
             
         <div class="main-beer-des"> <%= beer.get('beers').description %> </div>
 
         <div class="location-username"> <%=user.get('username')%> </div>
-        <div class="main-score">  <%=user.get('score')%> </div>
+        <div class="main-score"> <%=user.get('score')%> </div>
         
             
         <img class="down-arrow" src="images/downArrow.png" width="50">

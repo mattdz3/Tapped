@@ -5,7 +5,7 @@ var MainView = Parse.View.extend({
 	template: _.template($('.main-view-temp').text()),
 
 	events: {
-		"click .main-signout"       : "signout",
+		"click .main-signout" : "signout",
 	},
 
 	initialize: function() {

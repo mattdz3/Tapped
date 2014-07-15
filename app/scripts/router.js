@@ -16,6 +16,21 @@ var AppRouter = Parse.Router.extend({
 
 	initialize: function(options) {
 		this.currentView = null;
+
+		var query = new Parse.Query(Place);
+		
+
+		query.find({
+			success: function(places) {
+				places.forEach(function(place) {
+					new SidebarView({model: place});
+				})
+			},
+
+			error: function(places, error) {
+				console.log("did not get locations")
+			}
+		});
 	},
 
 	logIn: function() {
@@ -44,53 +59,38 @@ var AppRouter = Parse.Router.extend({
 			this.swap(view);
 		}
 
-		var query = new Parse.Query(Place);
-		
 
-		query.find({
-			success: function(places) {
-				places.forEach(function(place) {
-					new SidebarView({model: place});
-				})
-			},
-
-			error: function(places, error) {
-				console.log("did not get locations")
-			}
-		});
 	},
 
 	location: function(id) {
+		$('.main-sidebar').show();
 		var that = this;
 		var user = Parse.User.current();
 		if(!user) {
 			this.TologIn();
 		} else {
 			
-
 			var query = new Parse.Query(Place);
 			query.equalTo("objectId", id);
 			query.find({
 				success: function(results) {
 					results[0].relation('beers').query().find().done(function(tapList) {
+						$('.main-container').html('');
 						tapList.forEach(function(onTap) {
-							console.log("onTap is", onTap.attributes)
-							that.swap(new LocationView({
+							console.log(onTap)
+							new LocationView({
 								beerModel: onTap,
 								userModel: user
-							}))
+							})
 						})
 					})						
 				},
 
 				error: function(objectId, error) {
-					console.log('did not get id')
+					console.log('failed router')
 				}
 			})
-
 		}
-
-		
 	},
 
 	addBeer: function(id) {
@@ -119,6 +119,7 @@ var AppRouter = Parse.Router.extend({
   	},
 
 	swap: function(view) {
+		$('.main-container').html('');
 		if (this.currentView) this.currentView.remove();
 		this.currentView = view;
 		this.currentView.render();

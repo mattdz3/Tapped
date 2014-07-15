@@ -2,6 +2,8 @@
 
 var LocationView = Parse.View.extend({
 	
+	className: "all-the-beers",
+
 	template: _.template($('.render-location-temp').text()),
 
 	events: {
@@ -15,10 +17,8 @@ var LocationView = Parse.View.extend({
 		this.beerModel = options.beerModel;
 		this.userModel = options.userModel;
 
-		// this.beerModel.save();
-		// this.userModel.save();
-
-		$('.main-container').append(this.el)
+		$('.main-container').append(this.el);
+		this.render();
 	},
 
 	render: function() {
@@ -26,7 +26,7 @@ var LocationView = Parse.View.extend({
 			beer: this.beerModel, 
 			user: this.userModel,
 		})
-		
+
 		this.$el.html(renderTemp);
 		return this;
 	},
