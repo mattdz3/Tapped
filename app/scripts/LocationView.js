@@ -9,15 +9,24 @@ var LocationView = Parse.View.extend({
 		"click .main-signout"       : "signout",
 		"click .up-arrow"           : "upVote",
 		"click .down-arrow"         : "downVote",
-		"click .beer-button"        : "setPlace",
 	},
 
-	initialize: function() {
-		$('.location-beer-list').append(this.el)
+	initialize: function(options) {
+		this.beerModel = options.beerModel;
+		this.userModel = options.userModel;
+
+		// this.beerModel.save();
+		// this.userModel.save();
+
+		$('.main-container').append(this.el)
 	},
 
 	render: function() {
-		var renderTemp = this.template(this.model)
+		var renderTemp = this.template({
+			beer: this.beerModel, 
+			user: this.userModel,
+		})
+		
 		this.$el.html(renderTemp);
 		return this;
 	},
@@ -57,14 +66,5 @@ var LocationView = Parse.View.extend({
 				console.log("failed")
 			}
 		})
-	},
-
-	setPlace: function() {
-		// beerObject = new Beer();
-		// var setlocation = new Place();
-		// setlocation.id = currentLocation;
-
-		// beerObject.set("parent", setlocation)
-		// console.log(beerObject)
 	},
 })

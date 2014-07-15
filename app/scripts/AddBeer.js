@@ -22,7 +22,6 @@ var AddBeerView = Parse.View.extend({
 		$('.main-header').hide();
 		$('.main-footer').hide();
 		$('.main-sidebar').hide();
-		$('.main-login').hide();
 		$('.add-beer-container').show();
 	},
 
@@ -34,7 +33,6 @@ var AddBeerView = Parse.View.extend({
 
 	goBack: function() {
 		$('.beer-style').slideUp("slow");
-		$('.brewery-style').slideDown("slow");
 		$('#results').html('');
 	},
 
@@ -87,8 +85,7 @@ var AddBeerView = Parse.View.extend({
 
 	findBrewery: function() {
 		$('.beer-style').slideDown("slow");
-		$('.brewery-style').slideUp("slow");
-		// $('.add-beer-contents').slideToggle("slow");
+
 		var newBrewery = $("#search-brewery").val();
 		newList = $.get('http://0.0.0.0:3000/api/search?q=' + newBrewery + '&type=beer').done(function(beers) {
 			
@@ -103,11 +100,10 @@ var AddBeerView = Parse.View.extend({
 
 	addBeer: function() {
 		$('.beer-style').slideUp("slow");
-		$('.brewery-style').slideDown("slow");
 
 		var newBeer = $('.searchField').val();
 
-		var currentPlace = new Place();
+		
 
 		var newBeerObject = _.findWhere(setArray, {name: newBeer})
 		console.log(newBeerObject)

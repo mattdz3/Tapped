@@ -33,7 +33,7 @@
             </h1>
             <a href="#login"> <div class="main-login"> Login </div> </a> 
             <div class="main-container">
-                <div class="location-beer-list"></div>
+                <!-- <div class="location-beer-list"></div> -->
             </div>
             <div class="main-sidebar"></div>
             <div class="main-footer"></div>
@@ -105,19 +105,19 @@
 
     <script type="text/template" class="render-location-temp">
         <div class="main-user">  Hello 
-            <div class="main-username"> <%=username%> </div>  
+            <div class="main-username"> <%=user.get('username')%> </div>  
         </div>
         <a href="#add"><button class="beer-button">Add a Beer</button></a>
 
         <a href="#login"> <div class="main-signout"> Logout </div> </a>
         <div class="main-contents">
         <button class="main-delete-button">Delete</button>
-            <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150">
+            <div class="beer"> <img src="<%=beer.get('beers').labels.medium%>" width="120">  </div>
             
-        <div class="main-beer-des"> This beer is AWESOME! </div>
+        <div class="main-beer-des"> <%= beer.get('beers').description %> </div>
 
-        <div class="location-username"> <%=username%> </div>
-        <div class="main-score">  <%=score%> </div>
+        <div class="location-username"> <%=user.get('username')%> </div>
+        <div class="main-score">  <%=user.get('score')%> </div>
         
             
         <img class="down-arrow" src="images/downArrow.png" width="50">
@@ -147,13 +147,13 @@
             </div>
 
             <div class="brewery-style">
-                <button class="save-brewery">Save</button>
+                <div class="save-brewery">Save</div>
                 <input id="search-brewery" placeholder="Search a brewery">
             </div>
 
             <div class="beer-style" style="display: none;">
-                <button class="back-to-brew">Back</button>
-                <button class="add-beer-submit">Save</button>
+                <div class="back-to-brew">Back</div>
+                <div class="add-beer-submit">Save</div>
 
                 <form id="theForm">
                 <input placeholder="Search for a beer" name="search" class="searchField"/>

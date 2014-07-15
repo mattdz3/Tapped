@@ -1,5 +1,6 @@
 "use strict";
 
+var currentPlace;
 var currentLocation;
 
 var SidebarView = Parse.View.extend({
@@ -24,8 +25,11 @@ var SidebarView = Parse.View.extend({
 	},
 
 	findId: function() {
+		//global
 		beerObject = new Beer();
-		var currentLocation = this.model.id
+		currentPlace = this.model;
+
+		currentLocation = this.model.id
 		console.log(currentLocation)
 		router.navigate('#home/' + currentLocation, {trigger: true})
 
@@ -33,6 +37,6 @@ var SidebarView = Parse.View.extend({
 		setlocation.id = currentLocation;
 
 		beerObject.set("parent", setlocation)
-		
+		Parse.User.current().set("parent", setlocation)
 	},
 })
