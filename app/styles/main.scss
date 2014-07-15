@@ -351,19 +351,21 @@ p {
 }
 
 .add-beer-container {
-	width: 45%;
+	width: 40%;
 	height: 500px;
-	padding-top: 50px;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: 260px;
+	background: #201F1E;
+	border-radius: 10px;
 }
-
 
 .add-beer-text {
 	color: #939393;
 	font-size: 28px;
-	margin-top: 100px;
-	margin-left: 530px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 80px;
+	text-align: center;
 }
 
 .add-beer-submit {
@@ -385,11 +387,9 @@ p {
 }
 
 .searchField {
-	float: right;
 	height: 20px;
-	display: block;
     width: 150px;
-    margin-right: 58px;
+    margin-right: 85px;
 }
 
 #theForm {
@@ -398,14 +398,14 @@ p {
 }
 
 #results {
-	margin-left: 480px;
+	margin-left: 77px;
 	margin-top: 40px;
 	font-size: 18px;
 	color: #939393;
     display: none;
     position: absolute;
     width: 500px;
-    height: 250px;
+    height: 300px;
     overflow: scroll;
 }
 
@@ -425,21 +425,16 @@ p {
 	width: 150px;
 	float: right;
 	display: inline-block;
-	margin-right: 103px;
+	margin-right: 180px;
 }
 
 .brewery-style {
-	float: right;
-	margin-top: 20px;
+	margin-left: 80px;
 	display: inline-block;
 }
 
 .beer-style {
-	height: 20px;
-	width: 800px;
-	margin-top: 20px;
-	margin-right: 150px;
-	float: right;
+	margin-right: 80px;
 }
 
 .save-brewery {
@@ -451,7 +446,6 @@ p {
 	background: #939393;
     color: #201F1E;
     border-radius: 6px;
-	margin-right: 200px;
 }
 
 .back-to-brew {

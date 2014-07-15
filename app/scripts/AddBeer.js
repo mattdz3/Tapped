@@ -22,6 +22,7 @@ var AddBeerView = Parse.View.extend({
 		$('.main-header').hide();
 		$('.main-footer').hide();
 		$('.main-sidebar').hide();
+		$('.main-login').hide();
 		$('.add-beer-container').show();
 	},
 
