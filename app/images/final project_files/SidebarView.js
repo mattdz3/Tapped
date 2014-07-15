@@ -33,6 +33,6 @@ var SidebarView = Parse.View.extend({
 		setlocation.id = currentLocation;
 
 		beerObject.set("parent", setlocation)
-		
+		console.log(beerObject)
 	},
 })

@@ -96,7 +96,7 @@ var AppRouter = Parse.Router.extend({
 			}
 		})
 
-		// var place = new Place();
+		var place = new Place();
 
 		// place.relation('beers').query().find().done(function(tapList) {
 		// 	tapList.forEach(function(onTap) {

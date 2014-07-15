@@ -7,7 +7,7 @@ body {
 }
 
 p {
-	color: #737373;
+	color: #939393;
 	padding-left: 5px;
 	margin-right: 200px;
 	margin-left: 30px;
@@ -22,23 +22,27 @@ p {
 	background-size: cover;
 }
 
-// sign-in and sign-up start, end at 72
+// sign-in and sign-up start
+
 .header {
 	margin-top: 0;
-	padding-top: 50px;
+	padding-top: 47px;
 	width: 100%;
 	height: 80px;
 	font-size: 40px;
 	text-align: center;
 	line-height: 70px;
-	color: #737373;
+	color: #939393;
 }
 
 .container {
 	width: 30%;
-	height: 600px;
-	margin-top: 100px;
-	margin-left: 800px;
+	text-align: center;
+	height: 550px;
+	margin-top: 80px;
+	margin-left: 700px;
+	background: #201F1E;
+	border-radius: 10px;
 }
 
 .sign {
@@ -46,11 +50,11 @@ p {
 	margin-top: 20px;
 	text-align: center;
 	font-size: 30px;
-	color: #737373;
+	color: #939393;
 } 
 
 .signin-welcome {
-	margin-right: 170px;
+	padding-top: 50px;
 	font-size: 35px;
 }
 
@@ -58,7 +62,8 @@ p {
 	display: block;
 	width: 60%;
 	margin-top: 30px;
-	margin-right: auto; 
+	margin-right: auto;
+	margin-left: auto; 
 }
 
 .password {
@@ -66,6 +71,7 @@ p {
 	width: 60%;
 	margin-top: 30px;
 	margin-right: auto;
+	margin-left: auto;
 }
 
 .sign-in-button {
@@ -77,7 +83,7 @@ p {
     border-radius: 6px;
 	margin-top: 30px;
 	width: 30%;
-	margin-left: 70px;
+	margin-left: auto;
 	margin-right: auto;
 }
 
@@ -85,21 +91,29 @@ p {
 	display: block;
 	margin-top: 50px;
 	width: 60%;
+	margin-left: auto;
 	margin-right: auto;
 	font-size: 30px;
 }
 
 .signup-welcome {
-	margin-right: 170px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
 }
 
 .sign-up-button {
 	display: block;
 	margin-top: 30px;
 	width: 60%;
+	margin-left: auto;
 	margin-right: auto;
 	font-size: 34px;
-	color: #737373;
+	color: #939393;
+}
+
+.signin-footer {
+	height: 100px;
 }
 
 // sign-in and sign-up end
@@ -116,13 +130,12 @@ p {
     padding-top: 30px;
     font-size: 40px;
     width: 100%;
-    height: 140px;
+    height: 120px;
     text-align: center;
     line-height: 2.6em;
 }
 
 .main-logo {
-	padding-top: 20px;
     margin-right: auto;
     margin-left: auto;
     display: inline-block;
@@ -145,7 +158,6 @@ p {
 	float: left;
 	height: 20px;
 	font-size: 20px;
-	margin-top: 20px;
 	margin-left: 55px;
 	color: #939393;
 }
@@ -157,6 +169,7 @@ p {
 	font-size: 13px;
 	margin-right: 20px;
 	color: #939393;
+	padding-left: 5px;
 }
 
 .main-signout:hover {
@@ -213,6 +226,11 @@ p {
 	color: #939393;
 }
 
+.location-username {
+	display: inline-block;
+	margin-top: 60px;
+}
+
 .main-user-name {
     width: 95px;
     margin-top: 60px;
@@ -224,6 +242,7 @@ p {
 .main-score {
     display: inline-block;
     margin-top: 60px;
+    margin-left: 100px;
     width: 50px;
 }
 
@@ -265,7 +284,7 @@ p {
 }
 
 .main-contents {
-    border: 1px solid #201F1E;;
+    border: 1px solid #201F1E;
     border-radius: 10px;
     height: 150px;
     margin-top: 40px;
@@ -280,7 +299,7 @@ p {
     width: 20%;
     height: 500px;
     float: left; 
-    color: #201F1E;
+    color: #939393;
     padding: 0;
     margin: 0;
     margin-top: 60px;
@@ -306,41 +325,42 @@ p {
 
 .add-beer-header {
 	margin: 0;
-	padding-top: 30px;
+	padding-top: 47px;
 	text-align: center;
 	font-size: 40px;
 	line-height: 70px;
 	width: 100%;
 	height: 80px;
-	color: rgb(153, 136, 132);
+	color: #939393;
 }
 
 .add-beer-user {
 	float: right;
 	font-size: 20px;
 	margin-top: 40px;
-	margin-right: 40px;
-	color: #998884;
+	margin-right: 55px;
+	color: #939393;
 }
 
 .add-beer-home {
 	margin-top: 40px;
-	margin-left: 20px;
+	margin-left: 55px;
 	font-size: 20px;
-	color: #998884;
+	color: #939393;
 	float: left;
 }
 
 .add-beer-container {
-	width: 75%;
+	width: 45%;
 	height: 500px;
+	padding-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 
 .add-beer-text {
-	color: rgb(153, 136, 132);
+	color: #939393;
 	font-size: 28px;
 	margin-top: 100px;
 	margin-left: 530px;
@@ -349,7 +369,9 @@ p {
 .add-beer-submit {
 	float: right;
 	border: 0;
+	width: 80px;
 	height: 25px;
+	font-size: 15px;
 	background: #939393;
     color: #201F1E;
     border-radius: 6px;
@@ -379,13 +401,12 @@ p {
 	margin-left: 480px;
 	margin-top: 40px;
 	font-size: 18px;
-	color: white;
+	color: #939393;
     display: none;
     position: absolute;
     width: 500px;
     height: 250px;
     overflow: scroll;
-
 }
 
 #results div {
@@ -404,7 +425,7 @@ p {
 	width: 150px;
 	float: right;
 	display: inline-block;
-	margin-right: 80px;
+	margin-right: 103px;
 }
 
 .brewery-style {
@@ -417,13 +438,15 @@ p {
 	height: 20px;
 	width: 800px;
 	margin-top: 20px;
-	margin-right: 200px;
+	margin-right: 150px;
 	float: right;
 }
 
 .save-brewery {
 	float: right;
 	height: 25px;
+	width: 80px;
+	font-size: 15px;
 	border: 0;
 	background: #939393;
     color: #201F1E;
@@ -434,6 +457,8 @@ p {
 .back-to-brew {
 	border: 0;
 	height: 25px;
+	width: 80px;
+	font-size: 15px;
 	background: #939393;
     color: #201F1E;
     border-radius: 6px;
