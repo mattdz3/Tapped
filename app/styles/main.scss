@@ -147,12 +147,13 @@ p {
 	display: inline-block;
 	margin-top: 20px;
 	margin-left: 20px;
-	width: 200px;
     font-size: 30px;
     background: #201F1E;
     border-radius: 8px;
     color: #939393;
     padding-left: 5px;
+    padding-right: 30px;
+    overflow: scroll;
 }
 
 .main-login {
@@ -223,7 +224,7 @@ p {
 }
 
 .main-beer-des {
-    width: 400px;
+    width: 300px;
     height: 60px;
     float: left; 
     margin-top: 60px;
@@ -238,6 +239,8 @@ p {
 }
 
 .location-username {
+	overflow: scroll;
+	width: 150px;
 	display: inline-block;
 	margin-top: 60px;
 }
@@ -326,7 +329,7 @@ p {
 }
 
 .main-footer {
-    margin-top: 840px;
+    margin-top: 900px;
     width: 100%;
     height: 60px;
     display: block;

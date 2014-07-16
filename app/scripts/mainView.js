@@ -2,6 +2,8 @@
 
 var MainView = Parse.View.extend({
 
+	className: 'title',
+
 	template: _.template($('.main-view-temp').text()),
 
 	events: {
@@ -10,6 +12,7 @@ var MainView = Parse.View.extend({
 
 	initialize: function() {
 		$('.main-header-container').append(this.el)
+		this.render();
 	},
 
 	render: function() {

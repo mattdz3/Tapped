@@ -20,6 +20,7 @@ var AddBeerView = Parse.View.extend({
 		$('.new-views').append(this.el)
 		$('.main-container').hide();
 		$('.main-header').hide();
+		$('.main-view-header').hide();
 		$('.main-footer').hide();
 		$('.main-sidebar').hide();
 		$('.main-login').hide();
@@ -121,7 +122,7 @@ var AddBeerView = Parse.View.extend({
 			Parse.User.current().relation("beers").add(beerObject);
 			Parse.User.current().save(null, {
 				success: function() {
-					console.log("saved a beer to current user")
+					console.log(beerObject)
 				},
 				error: function() {
 					console.log("failed to save a beer to a user")

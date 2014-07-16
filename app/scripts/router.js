@@ -5,6 +5,7 @@ var location;
 var AppRouter = Parse.Router.extend({
 
 	routes: {
+		''				 : "logIn",
 		"login"          : "logIn",
 		"signup"         : "signUp",
 		"home"           : "home",
@@ -44,9 +45,13 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	home: function() {
+		$('.main-header-container').html('')
 		$('.main-container').hide();
 		$('.main-header-container').show();
-
+		$('.main-header').show();
+		$('.main-footer').show();
+		$('.main-sidebar').show();
+		$('.main-login').show();
 
 		var user = Parse.User.current();
 		if(!user) {
@@ -60,11 +65,15 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	location: function(id) {
+		$('.main-header-container').html('')
+		new MainView({model: Parse.User.current().attributes})
+		
+		$('.intro').html('');
 		$('.main-sidebar').show();
 		$('.main-login').show();
 		$('.main-container').show();
-		$('.intro').remove();
-		
+
+		console.log(Parse.User.current().attributes)
 
 		var that = this;
 
@@ -122,7 +131,6 @@ var AppRouter = Parse.Router.extend({
   	},
 
 	swap: function(view) {
-		// $('.main-container').html('');
 		if (this.currentView) this.currentView.remove();
 		this.currentView = view;
 		this.currentView.render();

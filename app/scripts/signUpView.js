@@ -45,5 +45,4 @@ var SignUpView = Parse.View.extend({
 			}	
 		})
 	},
-
 })
