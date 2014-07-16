@@ -44,11 +44,9 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	home: function() {
-		$('.main-container').show();
-		$('.main-header').show();
-		$('.main-footer').show();
-		$('.main-sidebar').show();
-		$('.main-sidebar').html('')
+		$('.main-container').hide();
+		$('.main-header-container').show();
+
 
 		var user = Parse.User.current();
 		if(!user) {
@@ -59,12 +57,17 @@ var AppRouter = Parse.Router.extend({
 			this.swap(view);
 		}
 
-
 	},
 
 	location: function(id) {
 		$('.main-sidebar').show();
+		$('.main-login').show();
+		$('.main-container').show();
+		$('.intro').remove();
+		
+
 		var that = this;
+
 		var user = Parse.User.current();
 		if(!user) {
 			this.TologIn();
@@ -119,7 +122,7 @@ var AppRouter = Parse.Router.extend({
   	},
 
 	swap: function(view) {
-		$('.main-container').html('');
+		// $('.main-container').html('');
 		if (this.currentView) this.currentView.remove();
 		this.currentView = view;
 		this.currentView.render();

@@ -32,6 +32,7 @@
                <a href="#home"><div class="main-logo"> Tapped </div> </a>                
             </h1>
             <a href="#login"> <div class="main-login"> Login </div> </a> 
+            <div class="main-header-container"></div>
             <div class="main-container">
                 <!-- <div class="location-beer-list"></div> -->
             </div>
@@ -91,29 +92,26 @@
     <!-- main start -->
 
     <script type="text/template" class="main-view-temp">
+        <div class="main-view-header">
+            <div class="main-user">  Hello 
+                <div class="main-username"> <%= username %> </div> 
+            </div>
+            <a href="#add"> <button class="beer-button">Add a Beer</button> </a> 
 
-        <div class="main-user">  Hello 
-            <div class="main-username"> <%=username%> </div>  
+            <a href="#login"> <div class="main-signout"> Logout </div> </a>
         </div>
-
-        <a href="#login"> <div class="main-signout"> Logout </div> </a>
-
-        <p> Welcome to Tapped! <br> Select a location to see whats on tap!</p>
+        <p class="intro"> Welcome to Tapped! <br> Select a location to see whats on tap!</p>
     </script>
 
 
     <script type="text/template" class="render-location-temp">
-        <div class="main-user">  Hello 
-            <div class="main-username"> <%=user.get('username')%> </div>  
-        </div>
-        <a href="#add"><button class="beer-button">Add a Beer</button></a>
 
-        <a href="#login"> <div class="main-signout"> Logout </div> </a>
         <div class="main-contents">
+        
         <button class="main-delete-button">Delete</button>
             <a href="<%=beer.get('beers').labels.large%>"><div class="beer"> <img src="<%=beer.get('beers').labels.medium%>" width="120"> </div> </a>
             
-        <div class="main-beer-des"> <%= beer.get('beers').description %> </div>
+        <div class="main-beer-des"> <%= beer.get('beers').name %> </div>
 
         <div class="location-username"> <%=user.get('username')%> </div>
         <div class="main-score"> <%=user.get('score')%> </div>

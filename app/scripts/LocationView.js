@@ -14,10 +14,11 @@ var LocationView = Parse.View.extend({
 	},
 
 	initialize: function(options) {
+
 		this.beerModel = options.beerModel;
 		this.userModel = options.userModel;
 
-		$('.main-container').append(this.el);
+		$('.main-container').prepend(this.el);
 		this.render();
 	},
 

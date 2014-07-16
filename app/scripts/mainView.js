@@ -9,10 +9,7 @@ var MainView = Parse.View.extend({
 	},
 
 	initialize: function() {
-		$('.main-container').append(this.el)
-		$('.add-beer-container').hide();
-		$('.main-login').show();
-
+		$('.main-header-container').append(this.el)
 	},
 
 	render: function() {
