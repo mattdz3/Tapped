@@ -68,10 +68,17 @@ var AppRouter = Parse.Router.extend({
 		$('.main-header-container').html('')
 		new MainView({model: Parse.User.current().attributes})
 		
+		$('.add-beer-header').hide();
+		$('.add-beer-container').hide();
+		$('.add-beer-footer').hide();
+		$('.add-beer-info').hide();
 		$('.intro').html('');
 		$('.main-sidebar').show();
+		$('.main-view-header').show();
+		$('.main-view-container').show();
 		$('.main-login').show();
 		$('.main-container').show();
+		$('.selected-place').show();
 
 		console.log(Parse.User.current().attributes)
 

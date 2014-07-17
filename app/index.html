@@ -33,9 +33,12 @@
             </h1>
             
             <div class="main-header-container"></div>
-            <div class="main-container"></div>
+            
+            <div class="main-container"> </div>
             <a href="#login"> <div class="main-signout"> Logout </div> </a>
+
             <div class="main-sidebar"></div>
+
             <div class="main-footer"></div>
         </div>
         
@@ -96,15 +99,18 @@
     <!-- main start -->
 
     <script type="text/template" class="main-view-temp">
+
         <div class="main-view-header">
             <div class="main-user">  Hello 
                 <div class="main-username"> <%= username %> </div> 
             </div>
-            <a href="#add"> <button class="beer-button">Add a Beer</button> </a> 
+            <a href="#add"> <div class="beer-button">Add a Beer</div> </a> 
 
-            
+            <div class="selected-place"> </div>
         </div>
+
         <p class="intro"> Welcome to Tapped! <br> Select a location to see whats on tap!</p>
+
     </script>
 
 

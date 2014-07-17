@@ -29,6 +29,8 @@ var SidebarView = Parse.View.extend({
 		beerObject = new Beer();
 		currentPlace = this.model;
 
+		console.log(selectedPlace)
+
 		currentLocation = this.model.id
 		router.navigate('#home/' + currentLocation, {trigger: true})
 
@@ -37,5 +39,9 @@ var SidebarView = Parse.View.extend({
 
 		beerObject.set("parent", setlocation)
 		Parse.User.current().set("parent", setlocation)
+
+		var selectedPlace = currentPlace.attributes.place;
+		$('.selected-place').html('');
+		$('.selected-place').append(selectedPlace)
 	},
 })

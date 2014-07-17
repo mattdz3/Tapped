@@ -19,6 +19,7 @@ var AddBeerView = Parse.View.extend({
 	initialize: function() {
 		$('.new-views').append(this.el)
 		$('.main-container').hide();
+		$('.main-header-container').hide();
 		$('.main-view-header').hide();
 		$('.main-header').hide();
 		$('.main-footer').hide();
@@ -140,6 +141,8 @@ var AddBeerView = Parse.View.extend({
 				})
 			})
 		})
+
+		// router.navigate('#home/' + currentLocation, {trigger: true})
 	},
 })
 
