@@ -65,7 +65,6 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	location: function(id) {
-		console.log(this.model)
 		$('.main-header-container').html('')
 		new MainView({model: Parse.User.current().attributes})
 		
@@ -74,11 +73,12 @@ var AppRouter = Parse.Router.extend({
 		$('.add-beer-footer').hide();
 		$('.add-beer-info').hide();
 		$('.intro').html('');
-		$('.main-sidebar').show();
-		$('.main-view-header').show();
+		$('.main-contents').show();
+		$('.main-user').show();
+		$('.main-username').show();
+		$('.beer-button').show();
 		$('.main-view-container').show();
 		$('.main-login').show();
-		$('.main-container').show();
 		$('.selected-place').show();
 
 		var that = this;
@@ -97,7 +97,7 @@ var AppRouter = Parse.Router.extend({
 					beerQuery.find().done(function(tapList) {
 						$('.main-container').html('');
 						tapList.forEach(function(onTap) {
-							console.log(onTap)
+						
 							new LocationView({
 								beerModel: onTap,
 								userModel: user

@@ -17,10 +17,21 @@ var LocationView = Parse.View.extend({
 
 		this.beerModel = options.beerModel;
 		this.userModel = options.userModel;
-		console.log('this.beerModel',this.beerModel)
+		
+
+		$('.main-container').show();
+		$('.main-header-container').show();
+		$('.main-view-header').show();
+		$('.main-header').show();
+		$('.main-footer').show();
+		$('.main-sidebar').show();
+		$('.main-login').show();
+		
 		var selectedPlace = this.beerModel.get('parent').get('place');
 		$('.selected-place').html('');
 		$('.selected-place').append(selectedPlace)
+
+		
 
 		$('.main-container').prepend(this.el);
 		this.render();

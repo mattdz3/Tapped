@@ -118,8 +118,9 @@
 
         <div class="main-contents">
         
-        <button class="main-delete-button">Delete</button>
-            <a href="<%=beer.get('beers').labels.large%>"><div class="beer"> <img src="<%=beer.get('beers').labels.medium%>" width="120"> </div> </a>
+            <button class="main-delete-button">Delete</button>
+            <a href="<%=beer.get('beers').labels.large%>"><div class="beer"> <img src="<%=beer.get('beers').labels.medium%>" width="120"> </a>
+        </div> 
             
         <div class="main-beer-des"> <%= beer.get('beers').name %> </div>
 
@@ -145,7 +146,6 @@
         <div class="add-beer-logo">Tapped </div>
         </h1>
         <div class="add-beer-info">
-        <div class="add-beer-user"><%=Parse.User.current().attributes.username%></div>
 
         <a href="#home"><div class="add-beer-home">Home</div> </a>
         </div>

@@ -102,8 +102,7 @@ var AddBeerView = Parse.View.extend({
 	},
 
 	addBeer: function() {
-		$('.beer-style').slideUp("slow");
-
+		
 		var newBeer = $('.searchField').val();
 
 		
@@ -138,11 +137,13 @@ var AddBeerView = Parse.View.extend({
 					error: function() {
 						console.log("failed to saved beer to place")
 					}
+				}).done(function() {
+					router.navigate('#home/' + currentLocation, {trigger: true})
 				})
 			})
 		})
 
-		// router.navigate('#home/' + currentLocation, {trigger: true})
+		
 	},
 })
 
