@@ -40,21 +40,18 @@ var AddBeerView = Parse.View.extend({
 	},
 
 	findBeer: function() {
-
 		var lookFor = makeArray;
 
 	    var form = document.getElementById("theForm");
 	    var resultsDiv = document.getElementById("results");
 	    var searchField = form.search;
 	      
-	    // attach the keyup handler to the search field
 	    searchField.onkeyup = function() {
 	        var txt = this.value.toLowerCase();
 	        if ( txt.length == 0 ) return;
 
 	        var txtRE = new RegExp( "(" + txt + ")", "ig" );
 	        
-	        // any matches?
 	        var top = 0;
 	        for ( var i = 0; i < lookFor.length; ++i ) {
 	            var srch = lookFor[i];
@@ -76,7 +73,7 @@ var AddBeerView = Parse.View.extend({
 	            }
 	        }
 	    };
-	      // keydown handler
+
 	    searchField.onkeydown = function() {
 	        while ( resultsDiv.firstChild != null ) {
 	            resultsDiv.removeChild( resultsDiv.firstChild );
@@ -97,15 +94,11 @@ var AddBeerView = Parse.View.extend({
 			console.log(makeArray);
 
 			console.log(setArray);
-
 		});
 	},
 
 	addBeer: function() {
-		
 		var newBeer = $('.searchField').val();
-
-		
 
 		var newBeerObject = _.findWhere(setArray, {name: newBeer})
 		console.log(newBeerObject)
@@ -142,8 +135,6 @@ var AddBeerView = Parse.View.extend({
 				})
 			})
 		})
-
-		
 	},
 })
 
