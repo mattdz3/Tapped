@@ -1,24 +1,25 @@
 // bower:scss
 // endbower
 
+
 body {
 	margin: 0 auto;
 	font-family: 'Crete Round', serif;
 }
 
 p {
-	color: #939393;
+	color: #68421B;
 	padding-left: 5px;
 	margin-right: 200px;
 	margin-left: 30px;
 	margin-top: 30px;
 	margin-bottom: 5px;
-	background: #201F1E;
+	background: #FDFDE5;
 	border-radius: 8px;
 }
 
 .new-views {
-	background: url('http://images8.alphacoders.com/413/413078.jpg');
+	background: url('http://spitzackbuilders.com/wp-content/uploads/2014/06/darkwood.jpg');
 	background-size: cover;
 }
 
@@ -32,7 +33,25 @@ p {
 	font-size: 40px;
 	text-align: center;
 	line-height: 70px;
-	color: #939393;
+	
+}
+
+.signin-header {
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 8px;
+	background: #FDFDE5;
+	color: #68421B;
+}
+
+.signup-header {
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 8px;
+	background: #FDFDE5;
+	color: #68421B;
 }
 
 .container {
@@ -40,8 +59,9 @@ p {
 	text-align: center;
 	height: 550px;
 	margin-top: 80px;
-	margin-left: 700px;
-	background: #201F1E;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FDFDE5;
 	border-radius: 10px;
 }
 
@@ -50,7 +70,7 @@ p {
 	margin-top: 20px;
 	text-align: center;
 	font-size: 30px;
-	color: #939393;
+	color: #68421B;
 } 
 
 .signin-welcome {
@@ -61,7 +81,9 @@ p {
 .username {
 	display: block;
 	width: 60%;
+	height: 30px;
 	margin-top: 30px;
+	font-size: 15px;
 	margin-right: auto;
 	margin-left: auto; 
 }
@@ -69,6 +91,8 @@ p {
 .password {
 	display: block;
 	width: 60%;
+	height: 30px;
+	font-size: 15px;
 	margin-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
@@ -78,13 +102,15 @@ p {
 	display: block;
 	font-size: 15px;
 	border: 0;
-	background: #939393;
-    color: #201F1E;
+	background: #68421B;
+    color: #FDFDE5;
     border-radius: 6px;
 	margin-top: 30px;
 	width: 30%;
+	height: 35px;
 	margin-left: auto;
 	margin-right: auto;
+	cursor: pointer;
 }
 
 .sign-up {
@@ -109,7 +135,22 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 34px;
-	color: #939393;
+	color: #68421B;
+}
+
+.back {
+	display: block;
+	font-size: 15px;
+	border: 0;
+	background: #68421B;
+    color: #FDFDE5;
+    border-radius: 6px;
+	margin-top: 30px;
+	width: 30%;
+	height: 35px;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
 }
 
 .signin-footer {
@@ -137,55 +178,44 @@ p {
 }
 
 .main-logo {
-    margin-right: auto;
-    margin-left: auto;
-    display: inline-block;
-    color: #939393;
+    float: left;
+    margin-left: 50px;
+    background: #FDFDE5;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    color: #68421B;
+    position: fixed
 }
 
 .main-user {
 	display: inline-block;
-	margin-top: 20px;
 	margin-left: 20px;
     font-size: 30px;
-    background: #201F1E;
+    background: #FDFDE5;
     border-radius: 8px;
-    color: #939393;
+    color: #68421B;
     padding-left: 5px;
     padding-right: 30px;
     overflow: scroll;
 }
 
-.main-login {
-	float: left;
-	width: 100px;
-	font-size: 20px;
-	margin-left: 55px;
-	color: #939393;
-	padding-left: 5px;
-	position: fixed;
-}
-
 .main-login:hover {
-	background: #201F1E;
+	background: #FDFDE5;
 	border-radius: 6px;
 	transition: all .2s ease;
 }
 
 .main-signout {
-	margin-top: 3px;
-	margin-left: 20px;
-	width: 100px;
-	font-size: 13px;
+	margin-left: 50px;
+	width: 150px;
+	font-size: 25px;
+	border-radius: 7px;
 	margin-right: 20px;
-	color: #939393;
-	padding-left: 5px;
-}
-
-.main-signout:hover {
-	background: #201F1E;
-	border-radius: 6px;
-	transition: all .2s ease;
+	color: #68421B;
+	padding-left: 10px;
+	background: #FDFDE5;
+	position: fixed;
 }
 
 .beer-button {
@@ -194,10 +224,9 @@ p {
 	font-size: 18px;
     float: right;
     border: 0;
-    margin-top: 20px;
     margin-right: 25px;
-    background: #201F1E;
-    color: #939393;
+    background: #FDFDE5;
+    color: #68421B;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -213,14 +242,8 @@ p {
 	font-size: 18px;
 	margin-top: 10px;
 	cursor: pointer;
-	color: #939393;
+	color: #68421B;
 	padding-left: 5px;
-}
-
-.beer-locations:hover {
-	background: #201F1E;
-	border-radius: 6px;
-	transition: all .2s ease;
 }
 
 .main-beer-des {
@@ -228,14 +251,14 @@ p {
     height: 60px;
     float: left; 
     margin-top: 60px;
-    color: #939393;
+    color: #68421B;
     display: inline-block;
     overflow: hidden;
 }
 
 .main-username {
 	display: inline-block;
-	color: #939393;
+	color: #68421B;
 }
 
 .location-username {
@@ -265,8 +288,8 @@ p {
     display: inline-block;
     margin-top: 4px;
     margin-right: 4px;
-    background: #939393;
-    color: #201F1E;
+    background: #68421B;
+    color: #FDFDE5;
     border: 0;
     border-radius: 6px;
     cursor: pointer;
@@ -299,6 +322,7 @@ p {
 	margin-right: 50px;
     font-size: 40px;
     width: 70%;
+    height: 800px;
     float: right;
     overflow: scroll;
 }
@@ -311,19 +335,22 @@ p {
     margin-right: 20px;
     margin-left: 20px;
     font-size: 22px;
-    color: #939393;
-    background: #201F1E;
+    color: #68421B;
+    background: #FDFDE5;
 }
 
 .main-sidebar {
     width: 20%;
     height: 500px;
     float: left; 
-    color: #939393;
+    color: #68421B;
     padding: 0;
     margin: 0;
-    margin-top: 100px;
+    margin-top: 122px;
     margin-left: 50px;
+    background: #FDFDE5;
+    border-radius: 8px;
+    padding-left: 10px;
     position: fixed;
     overflow: scroll;
 }
@@ -334,6 +361,7 @@ p {
     height: 60px;
     display: block;
 }
+
 
 .place-list {
 	margin-left: 10px;
@@ -352,36 +380,54 @@ p {
 	line-height: 70px;
 	width: 100%;
 	height: 80px;
-	color: #939393;
+	color: #68421B;
+}
+
+.add-beer-logo {
+	width: 200px;
+	background: #FDFDE5;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 8px;
+}
+
+.add-beer-info {
+	float: left;
+	margin-left: 100px;
 }
 
 .add-beer-user {
-	float: right;
-	font-size: 20px;
-	margin-top: 40px;
-	margin-right: 55px;
-	color: #939393;
+	font-size: 25px;
+	margin-top: 85px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 6px;
+	background: #FDFDE5;
+	color: #68421B;
 }
 
 .add-beer-home {
 	margin-top: 40px;
-	margin-left: 55px;
+	width: 55px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 6px;
 	font-size: 20px;
-	color: #939393;
-	float: left;
+	color: #68421B;
+	background: #FDFDE5;
 }
 
 .add-beer-container {
 	width: 40%;
 	height: 500px;
 	margin-left: auto;
-	margin-right: 260px;
-	background: #201F1E;
+	margin-right: auto;
+	background: #FDFDE5;
 	border-radius: 10px;
 }
 
 .add-beer-text {
-	color: #939393;
+	color: #68421B;
 	font-size: 28px;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -393,12 +439,13 @@ p {
 	float: right;
 	border: 0;
 	width: 80px;
-	height: 25px;
-	font-size: 15px;
+	height: 30px;
+	font-size: 20px;
 	text-align: center;
-	background: #939393;
-    color: #201F1E;
+	background: #68421B;
+    color: #FDFDE5;
     border-radius: 6px;
+    padding-top: 5px;
 	margin-right: 15px;
 	display: inline-block;
 }
@@ -409,8 +456,9 @@ p {
 }
 
 .searchField {
-	height: 20px;
+	height: 30px;
     width: 150px;
+    font-size: 17px;
     margin-right: 85px;
 }
 
@@ -423,7 +471,7 @@ p {
 	margin-left: 77px;
 	margin-top: 40px;
 	font-size: 18px;
-	color: #939393;
+	color: #68421B;
     display: none;
     position: absolute;
     width: 500px;
@@ -443,9 +491,10 @@ p {
 }
 
 #search-brewery {
-	height: 20px;
+	height: 30px;
 	width: 150px;
 	float: right;
+	font-size: 17px;
 	display: inline-block;
 	margin-right: 180px;
 }
@@ -462,24 +511,26 @@ p {
 
 .save-brewery {
 	float: right;
-	height: 25px;
+	height: 30px;
+	padding-top: 5px;
 	width: 80px;
-	font-size: 15px;
+	font-size: 20px;
 	border: 0;
 	text-align: center;
-	background: #939393;
-    color: #201F1E;
+	background: #68421B;
+    color: #FDFDE5;
     border-radius: 6px;
 }
 
 .back-to-brew {
 	border: 0;
-	height: 25px;
+	height: 30px;
+	padding-top: 5px;
 	width: 80px;
-	font-size: 15px;
+	font-size: 20px;
 	text-align: center;
-	background: #939393;
-    color: #201F1E;
+	background: #68421B;
+    color: #FDFDE5;
     border-radius: 6px;
     float: right;
 }
@@ -488,94 +539,94 @@ p {
 
 //user view starts and ends on 296
 
-.user-view {
-	background: url('http://spitzackbuilders.com/wp-content/uploads/2014/06/darkwood.jpg');
-	background-size: cover;
-}
+// .user-view {
+// 	background: url('http://spitzackbuilders.com/wp-content/uploads/2014/06/darkwood.jpg');
+// 	background-size: cover;
+// }
 
-.user-header {
-	margin: 0;
-	text-align: center;
-	width: 100%;
-	height: 80px;
-	line-height: 70px;
-}
+// .user-header {
+// 	margin: 0;
+// 	text-align: center;
+// 	width: 100%;
+// 	height: 80px;
+// 	line-height: 70px;
+// }
 
-.user-logo {
-	float: left;
-}
+// .user-logo {
+// 	float: left;
+// }
 
-.user-home-button {
-	float: right;
-}
+// .user-home-button {
+// 	float: right;
+// }
 
-.user-container {
-	border: 1px solid black;
-	width: 70%;
-	height: 800px;
-	float: right;
-}
+// .user-container {
+// 	border: 1px solid black;
+// 	width: 70%;
+// 	height: 800px;
+// 	float: right;
+// }
 
-.user-contents {
-	border: 1px solid black;
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
+// .user-contents {
+// 	border: 1px solid black;
+// 	margin-top: 10px;
+// 	margin-left: 10px;
+// 	margin-right: 10px;
+// }
 
-.user-example {
-	float: right;
-	width: 800px;
-	margin-top: 75px;
-}
+// .user-example {
+// 	float: right;
+// 	width: 800px;
+// 	margin-top: 75px;
+// }
 
-.user-score {
-	float: right;
-	width: 400px;
-}
+// .user-score {
+// 	float: right;
+// 	width: 400px;
+// }
 
-.user-contents-again {
-	border: 1px solid black;
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
+// .user-contents-again {
+// 	border: 1px solid black;
+// 	margin-top: 10px;
+// 	margin-left: 10px;
+// 	margin-right: 10px;
+// }
 
-.user-sidebar {
-	border: 1px solid black;
-	width: 28%;
-	height: 800px;
-	float: left;
-}
+// .user-sidebar {
+// 	border: 1px solid black;
+// 	width: 28%;
+// 	height: 800px;
+// 	float: left;
+// }
 
-.user-sidebar img {
-	width: 100%;
-}
+// .user-sidebar img {
+// 	width: 100%;
+// }
 
-.user-name {
-	text-align: center;
-	font-size: 30px;
-	margin-top: 20px;
-}
+// .user-name {
+// 	text-align: center;
+// 	font-size: 30px;
+// 	margin-top: 20px;
+// }
 
-.user-date {
-	text-align: center;
-	font-size: 25px;
-	margin-top: 10px;
-}
+// .user-date {
+// 	text-align: center;
+// 	font-size: 25px;
+// 	margin-top: 10px;
+// }
 
-.user-score2 {
-	text-align: center;
-	font-size: 25px;
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
+// .user-score2 {
+// 	text-align: center;
+// 	font-size: 25px;
+// 	margin-top: 10px;
+// 	margin-bottom: 20px;
+// }
 
-.user-footer {
-	border: 1px solid black;
-	width: 100%;
-	height: 80px;
-	margin-top: 840px;
-}
+// .user-footer {
+// 	border: 1px solid black;
+// 	width: 100%;
+// 	height: 80px;
+// 	margin-top: 840px;
+// }
 
 //user view ends

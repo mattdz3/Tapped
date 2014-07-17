@@ -37,8 +37,8 @@ var LocationView = Parse.View.extend({
 	},
 
 	upVote: function() {
-		var userScore = currentUser;
-		var score = currentUser.attributes.score;
+		var userScore = Parse.User.current();
+		var score = userScore.attributes.score;
 		
 		userScore.set("score", score + 1)
 
@@ -46,8 +46,8 @@ var LocationView = Parse.View.extend({
 	},
 
 	downVote: function() {
-		var userScore = currentUser;
-		var score = currentUser.attributes.score;
+		var userScore = Parse.User.current();
+		var score = userScore.attributes.score;
 		
 		userScore.set("score", score - 1)
 
@@ -55,17 +55,15 @@ var LocationView = Parse.View.extend({
 	},
 
 	deleteBeer: function() {
-		var place = new Place();
-		var beer = new Beer();
-
-		place.relation("on-tap").remove(beer);
-		place.save(null, {
-			success: function() {
-				console.log("deleted a beer")
-			},
-			error: function() {
-				console.log("failed")
-			}
-		})
+		// console.log(currentPlace)
+		// currentPlace.relation("beers").remove(beerObject);
+		// currentPlace.save(null, {
+		// 	success: function() {
+		// 		console.log("deleted a beer")
+		// 	},
+		// 	error: function() {
+		// 		console.log("failed")
+		// 	}
+		// })
 	},
 })

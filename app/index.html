@@ -31,9 +31,10 @@
             <h1 class="main-header">
                <a href="#home"> <div class="main-logo"> Tapped </div> </a>
             </h1>
-            <a href="#login"> <div class="main-login"> Login </div> </a> 
+            
             <div class="main-header-container"></div>
             <div class="main-container"></div>
+            <a href="#login"> <div class="main-signout"> Logout </div> </a>
             <div class="main-sidebar"></div>
             <div class="main-footer"></div>
         </div>
@@ -47,7 +48,9 @@
 <!-- sign-in and sign-up start -->
 
         <script type="text/template" class="sign-in-temp">
-                <h1 class="header">Tapped</h1>
+                <h1 class="header">
+                    <div class="signin-header">Tapped</div>
+                </h1>
 
                 <div class="container">
                     <div class="sign">
@@ -62,14 +65,16 @@
                         <div class="sign-up">Not Regeistered? No Problem!</div>
 
                         <a href="#signup"<button class="sign-up-button">Click here to sign up!</button></a>
+
                     </div>
                 </div>
                 <div class="signin-footer"> </div>
         </script>
 
     <script type="text/template" class="sign-up-temp">
-        <a href="#login"><h1 class="header">Tapped
-        </h1></a>
+        <h1 class="header">
+        <div class="signup-header">Tapped</div>
+        </h1>
 
         <div class="container">
             <div class="sign">
@@ -80,6 +85,7 @@
                 <input type="password" class="password" placeholder="Create a password"></input>
 
                 <button class="sign-in-button">Create Account</button>
+                <a href="#login"><button class="back"> Back </button>
             </div>
         </div>
         <div class="signin-footer"> </div>
@@ -96,7 +102,7 @@
             </div>
             <a href="#add"> <button class="beer-button">Add a Beer</button> </a> 
 
-            <a href="#login"> <div class="main-signout"> Logout </div> </a>
+            
         </div>
         <p class="intro"> Welcome to Tapped! <br> Select a location to see whats on tap!</p>
     </script>
@@ -129,12 +135,14 @@
     <!-- add beer view start -->
 
     <script type="text/template" class="add-beer-temp">
-        <h1 class="add-beer-header"> Tapped 
-               
+        <h1 class="add-beer-header"> 
+        <div class="add-beer-logo">Tapped </div>
         </h1>
+        <div class="add-beer-info">
         <div class="add-beer-user"><%=Parse.User.current().attributes.username%></div>
 
         <a href="#home"><div class="add-beer-home">Home</div> </a>
+        </div>
 
         <div class="add-beer-container">
             <div class="add-beer-contents">
