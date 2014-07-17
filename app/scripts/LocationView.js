@@ -17,6 +17,10 @@ var LocationView = Parse.View.extend({
 
 		this.beerModel = options.beerModel;
 		this.userModel = options.userModel;
+		console.log('this.beerModel',this.beerModel)
+		var selectedPlace = this.beerModel.get('parent').get('place');
+		$('.selected-place').html('');
+		$('.selected-place').append(selectedPlace)
 
 		$('.main-container').prepend(this.el);
 		this.render();

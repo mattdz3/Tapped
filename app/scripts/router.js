@@ -65,6 +65,7 @@ var AppRouter = Parse.Router.extend({
 	},
 
 	location: function(id) {
+		console.log(this.model)
 		$('.main-header-container').html('')
 		new MainView({model: Parse.User.current().attributes})
 		
@@ -80,8 +81,6 @@ var AppRouter = Parse.Router.extend({
 		$('.main-container').show();
 		$('.selected-place').show();
 
-		console.log(Parse.User.current().attributes)
-
 		var that = this;
 
 		var user = Parse.User.current();
@@ -93,7 +92,9 @@ var AppRouter = Parse.Router.extend({
 			query.equalTo("objectId", id);
 			query.find({
 				success: function(results) {
-					results[0].relation('beers').query().find().done(function(tapList) {
+					var beerQuery = results[0].relation('beers').query();
+					beerQuery.include('parent');
+					beerQuery.find().done(function(tapList) {
 						$('.main-container').html('');
 						tapList.forEach(function(onTap) {
 							console.log(onTap)
@@ -110,6 +111,8 @@ var AppRouter = Parse.Router.extend({
 				}
 			})
 		}
+
+
 	},
 
 	addBeer: function(id) {
