@@ -1,0 +1,112 @@
+<!DOCTYPE html><!-- saved from url=(0038)http://localhost:9000/#home/gycMG9NU9a --><html class=no-js><head><meta http-equiv=Content-Type content="text/html; charset=UTF-8"><meta charset=utf-8><title>final project</title><meta name=description content=""><meta name=viewport content="width=device-width"><link rel="shortcut icon" href=http://localhost:9000/favicon.ico><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/b53b4ab5.main.css><body><!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--><div class=new-views></div><div class=signin-container></div><div class=main-view-container><h1 class=main-header><a href=http://localhost:9000/#home><div class=main-logo>Tapped</div></a> <a href=http://localhost:9000/#login><div class=main-login>Login</div></a></h1><div class=main-container><div class=location-beer-list><div><div class=main-user>Hello<div class=main-username>matt</div></div><a href=http://localhost:9000/#add><button class=beer-button>Add a Beer</button></a> <a href=http://localhost:9000/#login><div class=main-signout>Logout</div></a><div class=main-contents><button class=main-delete-button>Delete</button> <img class=beer src="./final project_files/a556b634.beer2.png" width=150><div class=main-beer-des>This beer is AWESOME!</div><div class=location-username>matt</div><div class=main-score>100</div><img class=down-arrow src="./final project_files/c1dea6f3.downArrow.png" width=50> <img class=up-arrow src="./final project_files/48feb88a.upArrow.png" width=50></div></div></div></div><div class=main-sidebar></div><div class=main-footer></div></div><div class=add-beer-view></div><div class=user-view></div><!-- sign-in and sign-up start --><script src="./final project_files/analytics.js"></script><script type=text/template class=sign-in-temp><h1 class="header">Tapped</h1>
+
+                <div class="container">
+                    <div class="sign">
+                    <div class="signin-welcome">Welcome!</div>
+                        <input class="username" placeholder="log in with your username">
+                        </input> 
+
+                        <input type="password" class="password" placeholder="password"></input>
+
+                        <button class="sign-in-button">Sign In</button>
+
+                        <div class="sign-up">Not Regeistered? No Problem!</div>
+
+                        <a href="#signup"<button class="sign-up-button">Click here to sign up!</button></a>
+                    </div>
+                </div></script><script type=text/template class=sign-up-temp><a href="#login"><h1 class="header">Tapped
+        </h1></a>
+
+        <div class="container">
+            <div class="sign">
+            <p class="signup-welcome">Sign up!</p>
+                <input class="username" placeholder="Create a Username">
+                </input> 
+
+                <input type="password" class="password" placeholder="Create a password"></input>
+
+                <button class="sign-in-button">Create Account</button>
+            </div>
+        </div></script><!-- sign-in and sign-up end --><!-- main start --><script type=text/template class=main-view-temp><div class="main-user">  Hello 
+            <div class="main-username"> <%=username%> </div>  
+        </div>
+        <a href="#add"><button class="beer-button">Add a Beer</button></a>
+
+        <a href="#login"> <div class="main-signout"> Logout </div> </a>
+
+        <p> Welcome to Tapped! <br> Where do you want to go today?</p></script><script type=text/template class=render-location-temp><div class="main-user">  Hello 
+            <div class="main-username"> <%=username%> </div>  
+        </div>
+        <a href="#add"><button class="beer-button">Add a Beer</button></a>
+
+        <a href="#login"> <div class="main-signout"> Logout </div> </a>
+        <div class="main-contents">
+        <button class="main-delete-button">Delete</button>
+            <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150">
+            
+        <div class="main-beer-des"> This beer is AWESOME! </div>
+
+        <div class="location-username"> <%=username%> </div>
+        <div class="main-score">  <%=score%> </div>
+        
+            
+        <img class="down-arrow" src="images/c1dea6f3.downArrow.png" width="50">
+            
+        <img class="up-arrow" src="images/48feb88a.upArrow.png" width="50"></script><script type=text/template class=sidebar-temp><%= this.model.attributes.place %></script><!-- main end --><!-- add beer view start --><script type=text/template class=add-beer-temp><h1 class="add-beer-header"> Tapped 
+            <div class="add-beer-user"><%=Parse.User.current().attributes.username%></div> 
+
+
+            <a href="#home"><div class="add-beer-home">Home</div> </a>
+        </h1>
+
+        <div class="add-beer-container">
+            <div class="add-beer-contents">
+                <div class="add-beer-text"> Search for a brewery then a beer! </div>
+            </div>
+
+            <div class="brewery-style">
+                <button class="save-brewery">Save brewery</button>
+                <input id="search-brewery" placeholder="Search a brewery">
+            </div>
+
+            <div class="beer-style" style="display: none;">
+                <button class="back-to-brew">Back</button>
+                <button class="add-beer-submit">Submit</button>
+
+                <form id="theForm">
+                <input placeholder="Search for a beer" name="search" class="searchField"/>
+                </form>
+
+                <div id="results"></div>
+            </div>    
+        </div>
+
+        <div class="add-beer-footer"></div></script><!-- Add beer view ends --><!-- User View starts --><script type=text/template class=user-view-temp><h1 class="user-header">Tapped
+            <a href="#home"><button class="user-home-button">Home</button></a>
+        </h1>
+
+        <div class="user-container">
+            <div class="user-contents">
+                <img class="beer" src="http://abhotel.com.au/img/placeholder-images/beer2.png" width="150"></img>
+                <div class="user-example">You added this beer to this place!
+                    <div class="user-score">Your Score</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="user-sidebar">
+            <img src="https://farmly.net/static/images/user-placeholder.jpg"></img>
+            <div class="user-name">username</div>
+            <div class="user-date">Date Joined</div>
+            <div class="user-score2">Score</div>
+        </div>
+
+        <div class="user-footer">footer goes here</div></script><script src=scripts/f51f348e.vendor.js></script><script src="./final project_files/parse-1.2.18.min.js"></script><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/f21a1e39.main.js></script><script type=text/javascript>document.write('<script src="' + (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script><script src="./final project_files/livereload.js" type=text/javascript></script>
