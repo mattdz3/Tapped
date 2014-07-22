@@ -11,6 +11,7 @@ var MainView = Parse.View.extend({
 	},
 
 	initialize: function() {
+		$('.main-signout').show();
 		$('.main-header-container').append(this.el)
 		this.render();
 	},
