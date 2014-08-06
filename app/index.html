@@ -12,14 +12,13 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
+
         <link rel="stylesheet" href="styles/main.css">
         
         <!-- endbuild -->
 
         <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
 
-        
-       
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -103,12 +102,15 @@
     <script type="text/template" class="main-view-temp">
 
         <div class="main-view-header">
-            <div class="main-user">  Hello 
-                <div class="main-username"> <%= username %> </div> 
+            <div class="main-user">  
+                Hello <%= username %>  
             </div>
-            <a href="#add"> <div class="beer-button">Add a Beer</div> </a> 
 
             <div class="selected-place"> </div>
+
+            <a href="#add"> <div class="beer-button">Add a Beer</div> </a> 
+
+            
         </div>
 
         <p class="intro"> Welcome to Tapped! <br> Select a location to see whats on tap!</p>
