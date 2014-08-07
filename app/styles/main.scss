@@ -3,7 +3,7 @@
 
 
 body {
-	margin: 0 auto;
+	margin: 0;
 	font-family: 'Crete Round', serif;
 }
 
@@ -19,6 +19,7 @@ p {
 }
 
 .new-views {
+	margin: 0;
 	background: url('http://www.innercirclecorona.com/wp-content/uploads//2013/09/wood-background-darker.jpg');
 	background-size: cover;
 }
@@ -179,23 +180,115 @@ p {
 
 .main-view-container {
 	margin: 0;
-	background-color: yellow;
-}
+	// background: url('http://www.innercirclecorona.com/wp-content/uploads//2013/09/wood-background-darker.jpg');
+ //    background-size: cover;
 
-.main-header {
-	width: 100%;
-	text-align: center;
-}
+	.main-header {
+		width: 100%;
+		padding-top: 80px;
+		text-align: center;
+	}
 
-.main-header-container {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+	.main-header-container {
+		width: 80%;
+		margin-top: 80px;
+		margin-left: auto;
+		margin-right: auto;
 
-	.title {
-		display: inline-block;
+		.title {
+			width: 100%;
+
+			.main-user {
+				display: inline-block;
+				font-size: 40px;
+			}
+
+			.selected-place {
+				width: 50%;
+				font-size: 40px;
+				text-align: right;
+				float: right;
+			}
+		}
+
+		.beer-button {
+			display: inline-block;
+			width: 10%;
+			text-align: center;
+			background-color: brown;
+		}
+	}
+
+	// locations beers
+
+	.main-container {
+		width: 75%;
+		float: right;
+
+		.all-the-beers {
+			width: 45%;
+			margin-top: 30px;
+			margin-left: 30px;
+			display: inline-block;
+			background-color: #FDFDE5;
+			border: 1px solid black;
+
+			.main-contents {
+				text-align: center;
+
+				.beer {
+					margin-top: 15px;
+
+					img {
+						width: 90%;
+					}
+				}
+
+				.main-beer-des {
+					font-size: 25px;
+					margin-bottom: 20px;
+				}
+
+				.location-username {
+					font-size: 20px;
+				}
+
+				.main-score {
+					font-size: 20px;
+				}
+
+				.arrows {
+					margin-top: 20px;
+					margin-bottom: 15px;
+				}
+
+				.main-delete-button {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	.main-sidebar {
+		width: 24%;
+		margin-top: 50px;
+		margin-left: 30px;
+
+		.beer-locations {
+			font-size: 18px;
+			margin-top: 8px;
+			cursor: pointer;
+		}
 	}
 }
+
+
+@media screen and (max-width: 900px) {
+
+	.main-view-container .main-container .all-the-beers {
+		width: 90%;
+	}
+} 
 
 
 // old main start, ends at 165

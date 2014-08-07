@@ -5,6 +5,7 @@
         <title>final project</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
@@ -100,41 +101,45 @@
     <!-- main start -->
 
     <script type="text/template" class="main-view-temp">
-
-        <div class="main-view-header">
-            <div class="main-user">  
-                Hello <%= username %>  
-            </div>
-
-            <div class="selected-place"> </div>
-
-            <a href="#add"> <div class="beer-button">Add a Beer</div> </a> 
-
-            
+       
+        <div class="main-user">  
+            Hello <%= username %>  
         </div>
 
+        <div class="selected-place"> </div>
+
         <p class="intro"> Welcome to Tapped! <br> Select a location to see whats on tap!</p>
+
+        <div class="beer-button"><a href="#add">Add a Beer</a></div>
 
     </script>
 
 
     <script type="text/template" class="render-location-temp">
 
+    
+
         <div class="main-contents">
         
-            <button class="main-delete-button">Delete</button>
-            <a href="<%=beer.get('beers').labels.large%>"><div class="beer"> <img src="<%=beer.get('beers').labels.medium%>" width="120"> </a>
-        </div> 
-            
-        <div class="main-beer-des"> <%= beer.get('beers').name %> </div>
+            <div class="beer"> <img src="<%=beer.get('beers').labels.large%>"></div> 
+                
+            <div class="main-beer-des"> <%= beer.get('beers').name %> </div>
 
-        <div class="location-username"> <%=user.get('username')%> </div>
-        <div class="main-score"> <%=user.get('score')%> </div>
-        
-            
-        <img class="down-arrow" src="images/downArrow.png" width="50">
-            
-        <img class="up-arrow" src="images/upArrow.png" width="50">
+            <div class="location-username"> Uploaded By <%=user.get('username')%> 
+
+                <div class="main-score"> <%=user.get('username')%>s score <%=user.get('score')%> </div>
+            </div>
+
+            <div class="arrows">
+                <img class="down-arrow" src="images/downArrow.png" width="50">
+                    
+                <img class="up-arrow" src="images/upArrow.png" width="50">
+            </div>
+
+            <button class="main-delete-button">Delete</button>
+
+        </div>
+
     </script>
 
     <script type="text/template" class="sidebar-temp">
